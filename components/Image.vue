@@ -14,13 +14,15 @@ export default {
     src: String,
   },
   mounted() {
-    let element = document.querySelector(".image");
+    let elements = document.querySelectorAll(".image");
 
-    let observer = new IntersectionObserver((entries) => {
-      element.classList.toggle("animation", entries[0].isIntersecting);
+    elements.forEach((element) => {
+      let observer = new IntersectionObserver((entries) => {
+        element.classList.toggle("animation", entries[0].isIntersecting);
+      });
+
+      observer.observe(element);
     });
-
-    observer.observe(element);
   },
 };
 </script>

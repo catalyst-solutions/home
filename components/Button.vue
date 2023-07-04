@@ -6,8 +6,8 @@
     <slot />
   </button>
   <button
-    class="text-xl bg-white p-8 py-4 text-black hover:bg-slate-300"
-    v-if="type == 'white'"
+    class="text-xl bg-black p-8 py-4 text-white hover:bg-slate-800"
+    v-if="type == 'black'"
   >
     <slot />
   </button>

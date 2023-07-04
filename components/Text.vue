@@ -25,7 +25,7 @@
     <slot />
   </div>
 
-  <div class="text-xl font-normal line-normal" v-if="size == 'default'">
+  <div class="text-xl font-normal leading-normal" v-if="size == 'default'">
     <slot />
   </div>
 </template>
