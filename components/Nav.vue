@@ -1,23 +1,32 @@
 <template>
-  <header class="bg-black flex py-0">
-    <Wrapper class="flex">
-      <img src="/logo.svg" style="height: 60px" />
+  <header class="bg-white flex py-2 items-center">
+    <Wrapper class="flex items-center">
+      <img src="/logo.svg" style="height: 40px" />
 
-      <div class="mx-auto flex gap-20 items-center text-center text-white">
-        <NuxtLink
-          class="hover:cursor-pointer border-black border-b-2 hover:border-white"
-        >
-          <Text type="small"> Services </Text>
-        </NuxtLink>
-        <NuxtLink
-          class="hover:cursor-pointer border-black border-b-2 hover:border-white"
-        >
-          <Text type="small"> Prior Work </Text>
-        </NuxtLink>
+      <div class="ml-auto flex gap-12 items-center text-center text-black">
+        <TextLink>
+          <div
+            class="flex gap-2 items-center opacity-70 hover:opacity-100 cursor-pointer"
+          >
+            Services
+          </div>
+        </TextLink>
+        <TextLink>
+          <div
+            class="flex gap-2 items-center opacity-70 hover:opacity-100 cursor-pointer"
+          >
+            Prior Work
+          </div>
+        </TextLink>
+        <TextLink>
+          <div
+            class="flex gap-2 items-center opacity-70 hover:opacity-100 cursor-pointer"
+          >
+            <Icon icon="email" fontSize="25px"></Icon>
+            <div>Contact</div>
+          </div>
+        </TextLink>
       </div>
-      <NuxtLink>
-        <Button type="black"> Contact Us! </Button>
-      </NuxtLink>
     </Wrapper>
   </header>
 </template>

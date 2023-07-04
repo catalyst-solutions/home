@@ -1,23 +1,31 @@
 <template>
-  <div class="text-8xl font-black" v-if="size == 'xl-title'">
-    <slot />
-  </div>
-  <div class="text-6xl font-normal" v-if="size == 'title'">
-    <slot />
-  </div>
-  <div class="text-6xl font-normal text-slate-500" v-if="size == 'subtitle'">
+  <div class="text-8xl font-semibold leading-tight" v-if="size == 'title'">
     <slot />
   </div>
 
-  <div class="text-2xl font-normal" v-if="size == 'default'">
+  <div
+    class="text-8xl font-semibold text-slate-400 leading-tight"
+    v-if="size == 'title-gray'"
+  >
     <slot />
   </div>
 
-  <div class="text-xl font-normal" v-if="size == 'small'">
+  <div class="text-6xl font-semibold leading-tight" v-if="size == 'subtitle'">
     <slot />
   </div>
 
-  <div class="text-2xl font-normal text-slate-500" v-if="size == 'dimmed'">
+  <div
+    class="text-6xl font-semibold text-slate-400 leading-tight"
+    v-if="size == 'subtitle-gray'"
+  >
+    <slot />
+  </div>
+
+  <div class="text-2xl font-bold" v-if="size == 'heading'">
+    <slot />
+  </div>
+
+  <div class="text-xl font-normal line-normal" v-if="size == 'default'">
     <slot />
   </div>
 </template>
