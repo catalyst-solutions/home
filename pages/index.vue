@@ -2,7 +2,7 @@
   <Wrapper>
     <!-- header-->
     <div
-      class="flex flex-col gap-5 pb-6"
+      class="flex flex-col gap-5 pb-6 fixed"
       style="height: calc(100vh - 76px - 5rem)"
     >
       <div class="flex flex-col gap-6">
@@ -41,12 +41,12 @@
   </Wrapper>
 
   <!-- prior work-->
-  <div class="bg-slate-100">
-    <div class="p-10"></div>
+  <div
+    class="flex flex-col gap-20 bg-white z-50 relative"
+    style="margin-top: 100vh"
+  >
     <Wrapper class="flex flex-col gap-12">
-      <Text size="subtitle"> Woran wir schon gearbeitet haben </Text>
-
-      <Image gray src="/img/pm1.png"></Image>
+      <Image src="/img/pm1.png"></Image>
       <TextLink to="/studies/pm">
         <Text size="heading">
           Party-Manager eine Komplettlösung <br />
@@ -54,53 +54,53 @@
         </Text>
       </TextLink>
     </Wrapper>
-    <div class="p-10"></div>
-  </div>
-  <!-- how we work-->
-  <div>
-    <Wrapper>
-      <Text size="subtitle-gray"> Gutes Design ist schwer </Text>
-      <Text size="subtitle"> Wir haben Erfahrung! </Text>
-      <div class="p-10"></div>
 
-      <div class="flex flex-col gap-12">
-        <div
-          class="grid md:grid-cols-2 border-b border-black pb-12 items-center"
-        >
-          <div class="w-1/3">
-            <Badge><Text size="heading"> 01 Planung </Text> </Badge>
+    <!-- how we work-->
+    <div>
+      <Wrapper>
+        <Text size="subtitle-gray"> Gutes Design ist schwer </Text>
+        <Text size="subtitle"> Wir haben Erfahrung! </Text>
+        <div class="p-10"></div>
+
+        <div class="flex flex-col gap-12">
+          <div
+            class="grid md:grid-cols-2 border-b border-black pb-12 items-center"
+          >
+            <div class="w-1/3">
+              <Badge><Text size="heading"> 01 Planung </Text> </Badge>
+            </div>
+
+            <Text>
+              Wir besprechen Ihre Idee kostenlos In-person oder über
+              Online-Meetings. In dieser Phase erstellen wir mit ihnen
+              kooperativ mood-boards und beraten Sie.
+            </Text>
           </div>
 
-          <Text>
-            Wir besprechen Ihre Idee kostenlos In-person oder über
-            Online-Meetings. In dieser Phase erstellen wir mit ihnen kooperativ
-            mood-boards und beraten Sie.
-          </Text>
+          <div
+            class="grid md:grid-cols-2 border-b border-black pb-12 items-center"
+          >
+            <Badge><Text size="heading"> 02 Evaluation & Design </Text> </Badge>
+
+            <Text>
+              Wir machen uns nochmals Gedanken über Ihren Auftrag und
+              finalisieren das Konzept. In dieser Phase werden wir auch die
+              ersten Design Vorschläge/Prototypen für Ihre Kampagne oder Website
+              vorstellen.
+            </Text>
+          </div>
+
+          <div class="grid md:grid-cols-2 pb-12 items-center">
+            <Badge><Text size="heading"> 03 Entwicklung </Text> </Badge>
+
+            <Text>
+              Let's get to work! Wir machen aus dem Ihnen vorgestellten Prototyp
+              Wirklichkeit! Das finale Produkt wird nach Fertigstellung an Sie
+              übergeben.
+            </Text>
+          </div>
         </div>
-
-        <div
-          class="grid md:grid-cols-2 border-b border-black pb-12 items-center"
-        >
-          <Badge><Text size="heading"> 02 Evaluation & Design </Text> </Badge>
-
-          <Text>
-            Wir machen uns nochmals Gedanken über Ihren Auftrag und finalisieren
-            das Konzept. In dieser Phase werden wir auch die ersten Design
-            Vorschläge/Prototypen für Ihre Kampagne oder Website vorstellen.
-          </Text>
-        </div>
-
-        <div class="grid md:grid-cols-2 pb-12 items-center">
-          <Badge><Text size="heading"> 03 Entwicklung </Text> </Badge>
-
-          <Text>
-            Let's get to work! Wir machen aus dem Ihnen vorgestellten Prototyp
-            Wirklichkeit! Das finale Produkt wird nach Fertigstellung an Sie
-            übergeben.
-          </Text>
-        </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </div>
   </div>
-  <div class="p-12"></div>
 </template>

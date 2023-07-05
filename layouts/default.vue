@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col gap-20 bg-white min-h-screen text-black">
+  <div class="z-50 relative flex flex-col bg-white min-h-screen text-black">
     <Nav />
     <slot />
 
-    <Footer />
+    <Footer class="z-50 relative" />
   </div>
 </template>
 
