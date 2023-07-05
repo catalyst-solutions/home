@@ -30,10 +30,10 @@
           <div class="flex gap-2 items-center">
             <img style="height: 20px" src="/logo.svg" />
 
-            ist eine Marketing Agentur <br />
+            ist eine Marketing Agentur mit
           </div>
           <Text size="heading">
-            mit Fokus auf Webdesign und Socialmedia-Marketing
+            Fokus auf Webdesign und Socialmedia-Marketing
           </Text>
         </Text>
       </div>
@@ -50,7 +50,8 @@
       <TextLink to="/studies/pm">
         <Text size="heading">
           Party-Manager eine Komplettlösung <br />
-          zur Verwaltung von Tickets für ein 600+ Personen Event
+          zur Verwaltung von Tickets <br />
+          für ein 600+ Personen Event
         </Text>
       </TextLink>
     </Wrapper>
