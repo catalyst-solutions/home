@@ -3,7 +3,7 @@
     <!-- header-->
     <div
       class="flex flex-col gap-5 pb-6 fixed"
-      style="height: calc(100vh - 76px - 5rem)"
+      style="height: calc(100vh - 76px)"
     >
       <div class="flex flex-col gap-6">
         <div class="flex flex-col">
@@ -42,17 +42,26 @@
 
   <!-- prior work-->
   <div
-    class="flex flex-col gap-20 bg-white z-50 relative"
+    class="flex flex-col gap-20 bg-white z-10 relative"
     style="margin-top: 100vh"
   >
     <Wrapper class="flex flex-col gap-12">
-      <Image src="/img/pm1.png"></Image>
+      <img src="/img/pm1.png" />
       <TextLink to="/studies/pm">
-        <Text size="heading">
-          Party-Manager eine Komplettlösung <br />
-          zur Verwaltung von Tickets <br />
-          für ein 600+ Personen Event
-        </Text>
+        <div class="block sm:hidden">
+          <Text size="heading">
+            Party-Manager eine Komplettlösung <br />
+            zur Verwaltung von Tickets für <br />
+            ein 600+ Personen Event
+          </Text>
+        </div>
+        <div class="sm:block hidden">
+          <Text size="heading">
+            Party-Manager eine Komplettlösung zur Verwaltung von Tickets
+            <br />
+            für ein 600+ Personen Event
+          </Text>
+        </div>
       </TextLink>
     </Wrapper>
 
@@ -65,7 +74,7 @@
 
         <div class="flex flex-col gap-12">
           <div
-            class="grid md:grid-cols-2 border-b border-black pb-12 items-center"
+            class="grid md:grid-cols-2 border-b border-black pb-12 items-center gap-6"
           >
             <div class="w-1/3">
               <Badge><Text size="heading"> 01 Planung </Text> </Badge>
@@ -79,7 +88,7 @@
           </div>
 
           <div
-            class="grid md:grid-cols-2 border-b border-black pb-12 items-center"
+            class="grid md:grid-cols-2 border-b border-black pb-12 items-center gap-6"
           >
             <Badge><Text size="heading"> 02 Evaluation & Design </Text> </Badge>
 
@@ -91,7 +100,7 @@
             </Text>
           </div>
 
-          <div class="grid md:grid-cols-2 pb-12 items-center">
+          <div class="grid md:grid-cols-2 pb-12 items-center gap-6">
             <Badge><Text size="heading"> 03 Entwicklung </Text> </Badge>
 
             <Text>

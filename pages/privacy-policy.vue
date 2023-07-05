@@ -1,6 +1,8 @@
 <template>
   <Wrapper class="flex flex-col gap-12">
-    <div class="border-b border-slate-200 pb-12 flex flex-col md:flex-row">
+    <div
+      class="border-b border-slate-200 pb-12 flex flex-col md:flex-row gap-6"
+    >
       <div class="w-1/3">
         <Text size="heading">Point 1</Text>
       </div>
@@ -11,7 +13,9 @@
         eligendi vel!
       </Text>
     </div>
-    <div class="border-b border-slate-200 pb-12 flex flex-col md:flex-row">
+    <div
+      class="border-b border-slate-200 pb-12 flex flex-col md:flex-row gap-6"
+    >
       <div class="w-1/3">
         <Text size="heading">Point 2</Text>
       </div>
@@ -22,7 +26,9 @@
         eligendi vel!
       </Text>
     </div>
-    <div class="border-b border-slate-200 pb-12 flex flex-col md:flex-row">
+    <div
+      class="border-b border-slate-200 pb-12 flex flex-col md:flex-row gap-6"
+    >
       <div class="w-1/3">
         <Text size="heading">Point 3</Text>
       </div>
