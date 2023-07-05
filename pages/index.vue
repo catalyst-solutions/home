@@ -49,11 +49,12 @@
             gray
             src="https://64.media.tumblr.com/6bacb3e18d35adb6fce5b081fe5c07ca/tumblr_my2td9HVDf1svfte7o1_500.gif"
           ></Image>
-
-          <Text size="heading"
-            >Party Manager ist ein Custom-Kompletlösung zum Ticketmanagement für
-            ein Event mit über 600 Personen</Text
-          >
+          <div class="p-12">
+            <Text size="heading"
+              >Party Manager ist ein Custom-Kompletlösung zum Ticketmanagement
+              für ein Event mit über 600 Personen</Text
+            >
+          </div>
         </div>
         <div class="flex flex-col gap-6">
           <Image gray src="/img/csol.png"></Image>
