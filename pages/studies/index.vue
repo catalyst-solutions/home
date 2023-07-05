@@ -1,6 +1,0 @@
-<template> 
-<Wrapper>
-    
-</Wrapper>
-
-</template>
