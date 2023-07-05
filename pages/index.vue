@@ -44,29 +44,41 @@
       <Text size="subtitle"> Wir haben Erfahrung! </Text>
       <div class="p-10"></div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-0">
-        <div class="flex flex-col gap-6">
-          <Image
-            gray
-            src="https://64.media.tumblr.com/6bacb3e18d35adb6fce5b081fe5c07ca/tumblr_my2td9HVDf1svfte7o1_500.gif"
-          ></Image>
-          <div class="p-12">
-            <Text size="heading"
-              >Party Manager ist ein Custom-Kompletlösung zum Ticketmanagement
-              für ein Event mit über 600 Personen</Text
-            >
+      <div class="flex flex-col gap-12">
+        <div
+          class="grid md:grid-cols-2 border-b border-black pb-12 items-center"
+        >
+          <div class="w-1/3">
+            <Badge><Text size="heading"> 01 Planung </Text> </Badge>
           </div>
-        </div>
-        <div class="flex flex-col gap-6">
-          <Image gray src="/img/csol.png"></Image>
 
-          <div class="p-12">
-            <Text size="heading"
-              >Das Ziel bei unserer Website war unsere Fähigkeiten bestmöglich
-              zu representieren. Dazu kommt das designen unserer
-              brand-identity</Text
-            >
-          </div>
+          <Text>
+            Wir besprechen Ihre Idee kostenlos In-person oder über
+            Online-Meetings. In dieser Phase erstellen wir mit ihnen kooperativ
+            mood-boards und beraten Sie.
+          </Text>
+        </div>
+
+        <div
+          class="grid md:grid-cols-2 border-b border-black pb-12 items-center"
+        >
+          <Badge><Text size="heading"> 02 Evaluation & Design </Text> </Badge>
+
+          <Text>
+            Wir machen uns nochmals Gedanken über Ihren Auftrag und finalisieren
+            das Konzept. In dieser Phase werden wir auch die ersten Design
+            Vorschläge/Prototypen für Ihre Kampagne oder Website vorstellen.
+          </Text>
+        </div>
+
+        <div class="grid md:grid-cols-2 pb-12 items-center">
+          <Badge><Text size="heading"> 03 Entwicklung </Text> </Badge>
+
+          <Text>
+            Let's get to work! Wir machen aus dem Ihnen vorgestellten Prototyp
+            Wirklichkeit! Das finale Produkt wird nach Fertigstellung an Sie
+            übergeben.
+          </Text>
         </div>
       </div>
     </Wrapper>

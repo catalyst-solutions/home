@@ -12,7 +12,7 @@
         <TextLink to="/studies"> Case Studies </TextLink>
 
         <NuxtLink to="/contact">
-          <Button type="primary"> Contact </Button>
+          <Button type="primary"> Kontakt </Button>
         </NuxtLink>
       </div>
 
@@ -24,11 +24,12 @@
             </Button>
           </template>
           <Wrapper class="flex flex-col gap-6 items-center">
-            <TextLink> Home </TextLink>
-            <TextLink> Case Studies </TextLink>
-            <Button type="primary">
-              <div>Contact</div>
-            </Button>
+            <TextLink to="/"> Home </TextLink>
+            <TextLink to="/studies"> Case Studies </TextLink>
+
+            <NuxtLink to="/contact">
+              <Button type="primary"> Kontakt </Button>
+            </NuxtLink>
           </Wrapper>
         </Drawer>
       </div>
