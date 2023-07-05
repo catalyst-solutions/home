@@ -27,7 +27,11 @@
 
       <div class="mt-auto animate__delay-2s animate__animated animate__fadeIn">
         <Text size="heading">
-          CSOL ist eine Marketing Agentur <br />
+          <div class="flex gap-2 items-center">
+            <img style="height: 20px" src="/logo.svg" />
+
+            ist eine Marketing Agentur <br />
+          </div>
           <Text size="heading">
             mit Fokus auf Webdesign und Socialmedia-Marketing
           </Text>
