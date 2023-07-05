@@ -1,6 +1,6 @@
 <template>
   <button
-    class="text-xl bg-white p-8 py-4 text-black hover:outline-black hover:outline-2 outline-1 outline outline-slate-300 hover:outline-black"
+    class="text-xl bg-white p-8 py-4 text-black hover:outline-black hover:outline-2 outline-1 outline outline-slate-200 hover:outline-black"
     v-if="type == 'default'"
   >
     <slot />
