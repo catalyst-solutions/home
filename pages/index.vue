@@ -1,9 +1,10 @@
 <template>
   <Wrapper>
     <!-- header-->
-    <div class="flex flex-col gap-5 pb-6" style="height: calc(100vh - 76px)">
-      <div class="p-10"></div>
-
+    <div
+      class="flex flex-col gap-5 pb-6"
+      style="height: calc(100vh - 76px - 5rem)"
+    >
       <div class="flex flex-col gap-6">
         <div class="flex flex-col">
           <Text size="title-gray">

@@ -1,8 +1,6 @@
 <template>
   <Wrapper>
-    <div class="">
-      <div class="p-10"></div>
-
+    <div>
       <Text size="title-gray">
         <span class="animate__animated animate__fadeInDown">
           Schreiben sie uns
