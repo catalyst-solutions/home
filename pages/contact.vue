@@ -3,7 +3,7 @@
     <div>
       <Text size="title-gray">
         <span class="animate__animated animate__fadeInDown">
-          Schreiben sie uns
+          Schreiben Sie uns
         </span>
       </Text>
       <div class="p-10"></div>

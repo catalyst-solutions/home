@@ -42,8 +42,23 @@
 
   <!-- prior work-->
   <div class="bg-slate-100">
+    <div class="p-10"></div>
+    <Wrapper class="flex flex-col gap-12">
+      <Text size="subtitle"> Woran wir schon gearbeitet haben </Text>
+
+      <Image gray src="/img/pm1.png"></Image>
+      <TextLink to="/studies/pm">
+        <Text size="heading">
+          Party-Manager eine Komplettlösung <br />
+          zur Verwaltung von Tickets für ein 600+ Personen Event
+        </Text>
+      </TextLink>
+    </Wrapper>
+    <div class="p-10"></div>
+  </div>
+  <!-- how we work-->
+  <div>
     <Wrapper>
-      <div class="p-10"></div>
       <Text size="subtitle-gray"> Gutes Design ist schwer </Text>
       <Text size="subtitle"> Wir haben Erfahrung! </Text>
       <div class="p-10"></div>
