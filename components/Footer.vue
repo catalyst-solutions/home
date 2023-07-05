@@ -12,7 +12,7 @@
         </a>
       </div>
 
-      <img src="logo-light.svg" class="opacity-30 bottom-6 w-full" />
+      <img src="/logo-light.svg" class="opacity-30 bottom-6 w-full" />
     </Wrapper>
   </div>
 </template>
