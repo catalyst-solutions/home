@@ -1,5 +1,5 @@
 <template>
-  <div class="text-xl font-normal text-black link">
+  <div class="text-xl font-normal link" :style="css">
     <NuxtLink :to="to">
       <slot />
     </NuxtLink>
@@ -8,8 +8,20 @@
 
 <script>
 export default {
+  data() {
+    return {
+      css: "",
+    };
+  },
   props: {
     to: String,
+    color: {
+      type: String,
+      default: "black",
+    },
+  },
+  mounted() {
+    this.css = "--text-color: " + this.color;
   },
 };
 </script>
@@ -18,6 +30,7 @@ export default {
 .link {
   position: relative;
   width: max-content;
+  color: var(--text-color);
 }
 .link::before {
   content: "";
@@ -27,7 +40,7 @@ export default {
   height: 2px;
   bottom: -10px;
   left: 0;
-  background-color: #000;
+  background-color: var(--text-color);
 
   transition: 0.3s ease;
 }

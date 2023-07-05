@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col gap-xl bg-white min-h-screen text-black">
+  <div class="flex flex-col gap-20 bg-white min-h-screen text-black">
     <Nav />
     <slot />
+
+    <Footer />
   </div>
 </template>
 

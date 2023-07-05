@@ -1,32 +1,19 @@
 <template>
   <header class="bg-white flex py-2 items-center">
     <Wrapper class="flex items-center">
-      <img src="/logo.svg" style="height: 20px" />
+      <NuxtLink to="/">
+        <img src="/logo.svg" style="height: 20px" />
+      </NuxtLink>
 
       <div
         class="hidden md:flex ml-auto gap-12 items-center text-center text-black"
       >
-        <TextLink>
-          <div
-            class="flex gap-2 items-center opacity-70 hover:opacity-100 cursor-pointer"
-          >
-            Home
-          </div>
-        </TextLink>
-        <TextLink>
-          <div
-            class="flex gap-2 items-center opacity-70 hover:opacity-100 cursor-pointer"
-          >
-            Case Studies
-          </div>
-        </TextLink>
+        <TextLink to="/"> Home </TextLink>
+        <TextLink to="/studies"> Case Studies </TextLink>
 
-        <Button
-          type="primary"
-          class="flex gap-2 items-center opacity-70 hover:opacity-100 cursor-pointer"
-        >
-          <div>Contact</div>
-        </Button>
+        <NuxtLink to="/contact">
+          <Button type="primary"> Contact </Button>
+        </NuxtLink>
       </div>
 
       <div class="block md:hidden ml-auto">
@@ -37,24 +24,9 @@
             </Button>
           </template>
           <Wrapper class="flex flex-col gap-6 items-center">
-            <TextLink>
-              <div
-                class="flex gap-2 items-center opacity-70 hover:opacity-100 cursor-pointer"
-              >
-                Home
-              </div>
-            </TextLink>
-            <TextLink>
-              <div
-                class="flex gap-2 items-center opacity-70 hover:opacity-100 cursor-pointer"
-              >
-                Case Studies
-              </div>
-            </TextLink>
-            <Button
-              type="primary"
-              class="flex gap-2 items-center opacity-70 hover:opacity-100 cursor-pointer"
-            >
+            <TextLink> Home </TextLink>
+            <TextLink> Case Studies </TextLink>
+            <Button type="primary">
               <div>Contact</div>
             </Button>
           </Wrapper>

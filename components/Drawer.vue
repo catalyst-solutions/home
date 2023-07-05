@@ -6,12 +6,9 @@
   <div
     v-if="open"
     @click="open = false"
-    class="absolute bottom-0 left-0 w-screen h-screen bg-black z-50 opacity-30"
+    class="fixed bottom-0 left-0 w-screen h-screen bg-black z-50 opacity-30"
   />
-  <div
-    v-if="open"
-    class="absolute bottom-0 left-0 w-screen bg-white z-50 py-12"
-  >
+  <div v-if="open" class="fixed bottom-0 left-0 w-screen bg-white z-50 py-12">
     <slot />
   </div>
 </template>
