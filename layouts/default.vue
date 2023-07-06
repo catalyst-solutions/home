@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-10 relative flex flex-col bg-white min-h-screen text-black max-w-screen"
+    class="z-10 relative flex flex-col bg-white min-h-screen text-black max-w-screen overflow-x-hidden"
   >
     <Nav />
     <slot />
