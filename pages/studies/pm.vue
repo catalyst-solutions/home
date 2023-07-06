@@ -1,7 +1,13 @@
 <template>
   <Wrapper>
-    <div class="flex flex-col gap-20">
-      <div class="h-screen">
+    <div class="flex flex-col gap-20 md:mt-20 md:ml-20 mt-10">
+      <TextLink to="/studies">
+        <div class="flex items-center gap-2">
+          <Icon icon="arrow_back" />
+          Alle Case studies
+        </div>
+      </TextLink>
+      <div class="flex flex-col">
         <Text size="title">
           <span class="animate__animated animate__fadeInDown">
             Party Manager
@@ -40,7 +46,7 @@
       </div>
       <Image src="/img/pm2.png"></Image>
 
-      <Text size="subtitle"> Timeframe </Text>
+      <Text size="title"> Timeframe </Text>
 
       <div
         class="border border-slate-200 flex-col gap-2 relative hidden md:flex"

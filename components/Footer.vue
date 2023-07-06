@@ -1,8 +1,16 @@
 <template>
-  <div class="text-white w-full bg-black mt-auto h-screen overflow-hidden">
-    <Wrapper class="w-full flex flex-col gap-12 relative h-screen">
+  <div
+    class="text-white w-full bg-black mt-auto h-screen overflow-hidden relative"
+  >
+    <Wrapper class="w-full flex flex-col gap-12 relative h-screen relative">
       <div
-        class="flex flex-col md:flex-row gap-12 items-center text-center text-white mt-auto border-b border-white pb-6"
+        style="
+          position: absolute;
+          bottom: 450px;
+          width: calc(100% - 40px);
+          left: 20px;
+        "
+        class="flex flex-col md:flex-row gap-12 items-center text-center text-white mt-auto pb-6"
       >
         <TextLink color="#fff" to="/"> Home </TextLink>
         <TextLink color="#fff" to="/studies"> Case Studies </TextLink>
@@ -12,7 +20,27 @@
         </a>
       </div>
 
-      <img src="/logo-light.svg" class="opacity-30 bottom-6 w-full" />
+      <img
+        src="/logo-light.svg"
+        style="position: absolute; bottom: 0px; height: 400px"
+        class="opacity-30 bottom-6 w-full"
+      />
     </Wrapper>
+
+    <div class="flex flex-col absolute bottom-0 gap-6" style="height: 450px">
+      <div class="bg-white h-14 w-screen"></div>
+      <div class="bg-white h-12 w-screen"></div>
+      <div class="bg-white h-10 w-screen"></div>
+      <div class="bg-white h-9 w-screen"></div>
+      <div class="bg-white h-7 w-screen"></div>
+      <div class="bg-white h-6 w-screen"></div>
+      <div class="bg-white h-5 w-screen"></div>
+
+      <div class="bg-white h-4 w-screen"></div>
+
+      <div class="bg-white h-3 w-screen"></div>
+
+      <div class="bg-white h-2 w-screen"></div>
+    </div>
   </div>
 </template>

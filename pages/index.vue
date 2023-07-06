@@ -1,52 +1,46 @@
 <template>
   <Wrapper>
     <!-- header-->
-    <div
-      class="flex flex-col gap-5 pb-6 fixed"
-      style="height: calc(100vh - 76px)"
-    >
+    <div class="flex flex-col gap-5 pb-6" style="min-height: 80vh">
       <div class="flex flex-col gap-6">
-        <div class="flex flex-col">
-          <Text size="title-gray">
-            <span class="animate__animated animate__fadeInDown">
-              Wir entwickeln Lösungen
+        <div class="flex flex-col md:mt-20 md:ml-20 mt-10">
+          <Text size="title">
+            <span>
+              Wir sind eine Design Agentur mit <br />
+              Fokus auf der Entwicklung von digitalen Unternehmensauftritten<br />
+              die Kunden überzeugen
             </span>
           </Text>
-
-          <div class="flex gap-6 items-center">
-            <Text size="title">
-              <span
-                class="animate__delay-1s animate__animated animate__fadeInDown"
-              >
-                die Kunden ❤️ werden</span
-              >
-            </Text>
-          </div>
+          <br />
         </div>
-      </div>
-
-      <div class="mt-auto animate__delay-2s animate__animated animate__fadeIn">
-        <Text size="heading">
-          <div class="flex gap-2 items-center">
-            <img style="height: 20px" src="/logo.svg" />
-
-            ist eine Marketing Agentur mit
-          </div>
-          <Text size="heading">
-            Fokus auf Webdesign und Socialmedia-Marketing
-          </Text>
-        </Text>
       </div>
     </div>
   </Wrapper>
 
-  <!-- prior work-->
+  <div class="grid md:grid-cols-2">
+    <Card
+      to="/studies/pm"
+      src="https://images.unsplash.com/photo-1635070636690-d887c1a77e7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      project="Party Manager"
+      title="Event Management"
+      info="Ein all-in-one System zum management von Tickets"
+    />
+    <Card />
+  </div>
+
   <div
-    class="flex flex-col gap-20 bg-white z-10 relative"
+    class="flex flex-col gap-20 bg-white z-10 border-t relative"
     style="margin-top: 100vh"
   >
+    <!-- clients-->
+
+    <!-- prior work-->
     <Wrapper class="flex flex-col gap-12">
-      <img src="/img/pm1.png" />
+      <div class="flex flex-col">
+        <Text size="title-gray"> Gutes Design ist schwer </Text>
+        <Text size="title"> Wir haben Erfahrung! </Text>
+      </div>
+      <Image class="w-2/3" src="/img/pm1.png" />
       <TextLink to="/studies/pm">
         <div class="block sm:hidden">
           <Text size="heading">
@@ -68,8 +62,8 @@
     <!-- how we work-->
     <div>
       <Wrapper>
-        <Text size="subtitle-gray"> Gutes Design ist schwer </Text>
-        <Text size="subtitle"> Wir haben Erfahrung! </Text>
+        <Text size="title-gray"> Gutes Design ist schwer </Text>
+        <Text size="title"> Wir haben Erfahrung! </Text>
         <div class="p-10"></div>
 
         <div class="flex flex-col gap-12">
