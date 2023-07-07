@@ -25,6 +25,13 @@
       title="Event Management"
       info="Ein all-in-one System zum management von Tickets"
     />
+    <Card
+      to="/studies/csol"
+      src="/img/csol.svg"
+      project="CSOL Homepage"
+      title="Sie sind hier!"
+      info="Eine moderne website für usere Agentur "
+    />
   </div>
 
   <!-- how we work-->
