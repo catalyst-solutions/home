@@ -25,7 +25,6 @@
       title="Event Management"
       info="Ein all-in-one System zum management von Tickets"
     />
-    <Card />
   </div>
 
   <!-- how we work-->
