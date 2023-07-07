@@ -19,7 +19,7 @@
           </span>
         </Text>
 
-        <div class="flex grid grid-cols-3 mt-20">
+        <div class="flex grid grid-cols-2 mt-20">
           <div class="flex flex-col">
             <Text size="heading">Von</Text>
             <Text>Joshua</Text>
@@ -55,11 +55,11 @@
             <br />
             <div class="flex flex-col gap-6">
               <div class="flex gap-6 items-center">
-                <Badge>01</Badge>
+                <Badge>1</Badge>
                 Hinzufügen eines neuen Tickets nach eindeutiger Ticketnummer
               </div>
               <div class="flex gap-6 items-center">
-                <Badge>02</Badge>
+                <Badge>2</Badge>
                 Verifizieren eines Tickets durch manuelle Eingabe oder scannen
                 der Ticketnummer
               </div>

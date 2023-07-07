@@ -42,6 +42,8 @@ export default {
 <style>
 .text-load {
   animation: text-load 1s ease;
+  max-width: calc(100% - 40px);
+  word-break: break-word;
 }
 
 @keyframes text-load {

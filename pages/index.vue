@@ -40,7 +40,7 @@
           class="grid md:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
         >
           <div class="w-1/3">
-            <Badge><Text size="heading"> 01 Planung </Text> </Badge>
+            <Badge><div class="text-2xl">01 Planung</div> </Badge>
           </div>
 
           <Text>
@@ -53,7 +53,7 @@
         <div
           class="grid md:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
         >
-          <Badge><Text size="heading"> 02 Evaluation & Design </Text> </Badge>
+          <Badge><div class="text-2xl">02 Evaluation & Design</div> </Badge>
 
           <Text>
             Wir machen uns nochmals Gedanken über Ihren Auftrag und finalisieren
@@ -63,7 +63,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 pb-12 items-center gap-6">
-          <Badge><Text size="heading"> 03 Entwicklung </Text> </Badge>
+          <Badge><div class="text-2xl">03 Entwicklung</div> </Badge>
 
           <Text>
             Let's get to work! Wir machen aus dem Ihnen vorgestellten Prototyp
