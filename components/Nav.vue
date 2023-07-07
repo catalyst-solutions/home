@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-white flex py-2 z-50 h-screen fixed top-0 pt-6 right-0 hidden md:block pl-6"
+    class="bg-white flex py-2 z-50 h-screen fixed top-0 pt-10 right-0 hidden md:block pl-6"
     style="width: 300px"
   >
     <div class="flex flex-col flex gap-2 text-black h-full">
@@ -27,7 +27,7 @@
       >
         Kontakt
       </NuxtLink>
-      <NuxtLink class="mt-auto mb-6" to="/">
+      <NuxtLink class="mt-auto mb-10" to="/">
         <img class="w-16 opacity-70" src="/logo.svg" alt="logo" />
       </NuxtLink>
     </div>
