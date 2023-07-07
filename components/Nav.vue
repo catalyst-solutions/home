@@ -42,10 +42,7 @@
       <Wrapper class="flex flex-col gap-6 items-center">
         <TextLink to="/"> Home </TextLink>
         <TextLink to="/studies"> Case Studies </TextLink>
-
-        <NuxtLink to="/contact">
-          <Button type="primary"> Kontakt </Button>
-        </NuxtLink>
+        <TextLink to="/contact"> Kontakt </TextLink>
       </Wrapper>
     </Drawer>
   </header>

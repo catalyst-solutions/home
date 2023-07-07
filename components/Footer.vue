@@ -2,7 +2,9 @@
   <div
     class="text-white w-full bg-black mt-auto h-screen overflow-hidden relative"
   >
-    <div class="w-full flex flex-col gap-12 relative h-screen relative ml-20">
+    <div
+      class="w-full flex flex-col gap-12 relative h-screen relative items-center"
+    >
       <div
         style="position: absolute; bottom: 450px"
         class="flex flex-col md:flex-row gap-12 items-center text-center text-white mt-auto pb-6"
