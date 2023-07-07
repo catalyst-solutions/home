@@ -26,6 +26,18 @@
 
 <script>
 import "animate.css";
+useSeoMeta({
+  title: "CSOL",
+  ogTitle: "CSOL",
+  description: "CSOL is a design agency",
+  ogDescription: "CSOL is a design agency",
+  ogImage: "/logo.svg",
+  twitterCard: "/logo.svg",
+});
+
+useHead({
+  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+});
 </script>
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");

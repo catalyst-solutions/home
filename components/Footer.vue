@@ -19,7 +19,8 @@
 
       <img
         src="/logo-light.svg"
-        style="position: absolute; bottom: 0px; height: 400px"
+        alt="logo"
+        style="position: absolute; bottom: 0px; height: 400px; width: auto"
         class="opacity-30 bottom-6 w-full"
       />
     </div>

@@ -28,7 +28,7 @@
         Kontakt
       </NuxtLink>
       <NuxtLink class="mt-auto mb-6" to="/">
-        <img class="w-16 opacity-70" src="/logo.svg" />
+        <img class="w-16 opacity-70" src="/logo.svg" alt="logo" />
       </NuxtLink>
     </div>
   </header>
