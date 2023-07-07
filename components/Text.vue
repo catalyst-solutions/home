@@ -1,5 +1,6 @@
 <template>
   <div
+    :lang="lang"
     class="text-load md:text-6xl text-4xl md:leading-tight leading-tight"
     v-if="size == 'title'"
   >
@@ -7,6 +8,7 @@
   </div>
 
   <div
+    :lang="lang"
     class="text-load md:text-6xl text-4xl md:leading-tight leading-tight text-neutral-400"
     v-if="size == 'title-gray'"
   >
@@ -14,6 +16,7 @@
   </div>
 
   <div
+    :lang="lang"
     class="text-load md:text-2xl text-xl font-medium md:leading-normal"
     v-if="size == 'heading'"
   >
@@ -21,6 +24,7 @@
   </div>
 
   <div
+    :lang="lang"
     class="text-load md:text-xl text font-medium md:leading-loose leading-loose"
     v-if="size == 'default'"
   >
@@ -30,6 +34,18 @@
 
 <script>
 export default {
+  data() {
+    return {
+      lang: "en",
+    };
+  },
+  mounted() {
+    if (localStorage.getItem("lang")) {
+      this.lang = localStorage.getItem("lang");
+    } else {
+      this.lang = "de";
+    }
+  },
   props: {
     size: {
       type: String,
@@ -43,14 +59,9 @@ export default {
 .text-load {
   animation: text-load 1s ease;
   max-width: calc(100% - 40px);
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
+  text-wrap: balance;
   hyphens: auto;
+  word-break: break-word;
 }
 
 @keyframes text-load {
