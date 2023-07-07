@@ -1,7 +1,7 @@
 <template>
   <Wrapper>
     <div>
-      <Text size="title-gray">
+      <Text size="title">
         <span class="animate__animated animate__fadeInDown">
           Schreiben Sie uns
         </span>
@@ -33,8 +33,6 @@
         </div>
       </div>
     </div>
-    <div class="p-10">
-      
-    </div>
+    <div class="p-10"></div>
   </Wrapper>
 </template>

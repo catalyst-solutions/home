@@ -4,17 +4,17 @@
   >
     <div class="flex">
       <div
-        class="blur-3xl bg-fuchsia-200 absolute h-60 w-1/3 rounded-full animate__animated animate__fadeIn animate__delay-1s"
+        class="blur-3xl bg-lime-300 absolute h-60 w-1/3 rounded-full animate__animated animate__fadeIn animate__delay-1s"
         style="top: -100px; left: -100px; z-index: -1"
       ></div>
       <div
         style="width: calc(100vw - 300px - 1rem)"
-        class="flex flex-col gap-20 md:block hidden"
+        class="min-h-screen flex flex-col gap-20 md:block hidden"
       >
         <slot />
       </div>
 
-      <div class="flex flex-col gap-20 block md:hidden">
+      <div class="min-h-screen flex flex-col gap-20 block md:hidden">
         <slot />
       </div>
       <Nav />

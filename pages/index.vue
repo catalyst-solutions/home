@@ -3,7 +3,7 @@
     <!-- header-->
     <div class="flex flex-col gap-5 pb-6" style="min-height: 80vh">
       <div class="flex flex-col gap-6">
-        <div class="flex flex-col md:mt-20 md:ml-20 mt-10">
+        <div class="flex flex-col">
           <Text size="title">
             <span>
               Wir sind eine Design Agentur mit <br />
@@ -28,83 +28,50 @@
     <Card />
   </div>
 
-  <div
-    class="flex flex-col gap-20 bg-white z-10 border-t relative"
-    style="margin-top: 100vh"
-  >
-    <!-- clients-->
+  <!-- how we work-->
+  <div>
+    <Wrapper>
+      <Text size="title-gray"> Gutes Design ist schwer </Text>
+      <Text size="title"> Wir haben Erfahrung! </Text>
+      <div class="p-10"></div>
 
-    <!-- prior work-->
-    <Wrapper class="flex flex-col gap-12">
-      <div class="flex flex-col">
-        <Text size="title-gray"> Gutes Design ist schwer </Text>
-        <Text size="title"> Wir haben Erfahrung! </Text>
+      <div class="flex flex-col gap-12">
+        <div
+          class="grid md:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
+        >
+          <div class="w-1/3">
+            <Badge><Text size="heading"> 01 Planung </Text> </Badge>
+          </div>
+
+          <Text>
+            Wir besprechen Ihre Idee kostenlos In-person oder über
+            Online-Meetings. In dieser Phase erstellen wir mit ihnen kooperativ
+            mood-boards und beraten Sie.
+          </Text>
+        </div>
+
+        <div
+          class="grid md:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
+        >
+          <Badge><Text size="heading"> 02 Evaluation & Design </Text> </Badge>
+
+          <Text>
+            Wir machen uns nochmals Gedanken über Ihren Auftrag und finalisieren
+            das Konzept. In dieser Phase werden wir auch die ersten Design
+            Vorschläge/Prototypen für Ihre Kampagne oder Website vorstellen.
+          </Text>
+        </div>
+
+        <div class="grid md:grid-cols-2 pb-12 items-center gap-6">
+          <Badge><Text size="heading"> 03 Entwicklung </Text> </Badge>
+
+          <Text>
+            Let's get to work! Wir machen aus dem Ihnen vorgestellten Prototyp
+            Wirklichkeit! Das finale Produkt wird nach Fertigstellung an Sie
+            übergeben.
+          </Text>
+        </div>
       </div>
-      <Image class="w-2/3" src="/img/pm1.png" />
-      <TextLink to="/studies/pm">
-        <div class="block sm:hidden">
-          <Text size="heading">
-            Party-Manager eine Komplettlösung <br />
-            zur Verwaltung von Tickets für <br />
-            ein 600+ Personen Event
-          </Text>
-        </div>
-        <div class="sm:block hidden">
-          <Text size="heading">
-            Party-Manager eine Komplettlösung zur Verwaltung von Tickets
-            <br />
-            für ein 600+ Personen Event
-          </Text>
-        </div>
-      </TextLink>
     </Wrapper>
-
-    <!-- how we work-->
-    <div>
-      <Wrapper>
-        <Text size="title-gray"> Gutes Design ist schwer </Text>
-        <Text size="title"> Wir haben Erfahrung! </Text>
-        <div class="p-10"></div>
-
-        <div class="flex flex-col gap-12">
-          <div
-            class="grid md:grid-cols-2 border-b border-black pb-12 items-center gap-6"
-          >
-            <div class="w-1/3">
-              <Badge><Text size="heading"> 01 Planung </Text> </Badge>
-            </div>
-
-            <Text>
-              Wir besprechen Ihre Idee kostenlos In-person oder über
-              Online-Meetings. In dieser Phase erstellen wir mit ihnen
-              kooperativ mood-boards und beraten Sie.
-            </Text>
-          </div>
-
-          <div
-            class="grid md:grid-cols-2 border-b border-black pb-12 items-center gap-6"
-          >
-            <Badge><Text size="heading"> 02 Evaluation & Design </Text> </Badge>
-
-            <Text>
-              Wir machen uns nochmals Gedanken über Ihren Auftrag und
-              finalisieren das Konzept. In dieser Phase werden wir auch die
-              ersten Design Vorschläge/Prototypen für Ihre Kampagne oder Website
-              vorstellen.
-            </Text>
-          </div>
-
-          <div class="grid md:grid-cols-2 pb-12 items-center gap-6">
-            <Badge><Text size="heading"> 03 Entwicklung </Text> </Badge>
-
-            <Text>
-              Let's get to work! Wir machen aus dem Ihnen vorgestellten Prototyp
-              Wirklichkeit! Das finale Produkt wird nach Fertigstellung an Sie
-              übergeben.
-            </Text>
-          </div>
-        </div>
-      </Wrapper>
-    </div>
   </div>
 </template>

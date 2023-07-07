@@ -3,7 +3,7 @@
     class="bg-white flex py-2 z-50 h-screen fixed top-0 pt-6 right-0 hidden md:block"
     style="width: 300px"
   >
-    <div class="flex flex-col flex gap-2 text-black">
+    <div class="flex flex-col flex gap-2 text-black h-full">
       <NuxtLink
         to="/"
         class="text-xl text-load"
@@ -27,12 +27,17 @@
       >
         Kontakt
       </NuxtLink>
+      <NuxtLink class="mt-auto mb-6" to="/">
+        <img class="w-16 opacity-70" src="/logo.svg" />
+      </NuxtLink>
     </div>
   </header>
   <header class="block md:hidden fixed bottom-6 right-6">
     <Drawer>
       <template v-slot:trigger>
-        <Button type="black"> Menu </Button>
+        <Button type="black">
+          <div class="flex gap-2 items-center"><Icon icon="menu" /> Menu</div>
+        </Button>
       </template>
       <Wrapper class="flex flex-col gap-6 items-center">
         <TextLink to="/"> Home </TextLink>

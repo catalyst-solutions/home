@@ -1,6 +1,6 @@
 <template>
   <Wrapper>
-    <div class="flex flex-col gap-20 md:mt-20 md:ml-20 mt-10">
+    <div class="flex flex-col gap-20">
       <TextLink to="/studies">
         <div class="flex items-center gap-2">
           <Icon icon="arrow_back" />
@@ -18,9 +18,32 @@
             — All-in-One Ticketverwaltung
           </span>
         </Text>
+
+        <div class="flex grid grid-cols-3 mt-20">
+          <div class="flex flex-col">
+            <Text size="heading">Von</Text>
+            <Text>Joshua</Text>
+          </div>
+
+          <div class="flex flex-col">
+            <Text size="heading">Published</Text>
+            <Text>7 Jul 2023</Text>
+          </div>
+        </div>
       </div>
 
       <Image src="/img/pm1.png"></Image>
+      <div class="grid md:grid-cols-2 gap-6 border-b border-slate-200 pb-20">
+        <Text size="heading">Identifizieren des Problems</Text>
+        <div>
+          <Text>
+            Die Schwierigkeit beim Ticketverkauf war das festhalten der
+            Verkaufszahlen und Informationen nach dem Verkauf, welche für die
+            spätere Organisation von Wichtigkeit sind. Die Lösung: Digitale
+            Verwaltung der Tickets
+          </Text>
+        </div>
+      </div>
       <div class="grid md:grid-cols-2 gap-6">
         <Text size="heading">Das Ziel</Text>
         <div>

@@ -2,14 +2,9 @@
   <div
     class="text-white w-full bg-black mt-auto h-screen overflow-hidden relative"
   >
-    <Wrapper class="w-full flex flex-col gap-12 relative h-screen relative">
+    <div class="w-full flex flex-col gap-12 relative h-screen relative ml-20">
       <div
-        style="
-          position: absolute;
-          bottom: 450px;
-          width: calc(100% - 40px);
-          left: 20px;
-        "
+        style="position: absolute; bottom: 450px"
         class="flex flex-col md:flex-row gap-12 items-center text-center text-white mt-auto pb-6"
       >
         <TextLink color="#fff" to="/"> Home </TextLink>
@@ -25,7 +20,7 @@
         style="position: absolute; bottom: 0px; height: 400px"
         class="opacity-30 bottom-6 w-full"
       />
-    </Wrapper>
+    </div>
 
     <div class="flex flex-col absolute bottom-0 gap-6" style="height: 450px">
       <div class="bg-white h-14 w-screen"></div>

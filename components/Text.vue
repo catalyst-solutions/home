@@ -21,7 +21,7 @@
   </div>
 
   <div
-    class="text-load md:text-xl text font-medium md:leading-normal"
+    class="text-load md:text-xl text font-medium md:leading-loose leading-loose"
     v-if="size == 'default'"
   >
     <slot />

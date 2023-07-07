@@ -32,9 +32,12 @@ export default {
 
 <style>
 .card-text {
-  bottom: -80px;
+  top: calc(100% - 190px);
+}
+.card:hover img {
+  opacity: 0.7;
 }
 .card:hover .card-text {
-  bottom: 0;
+  transform: translate(0, -50%);
 }
 </style>
