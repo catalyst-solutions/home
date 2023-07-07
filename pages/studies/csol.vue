@@ -76,17 +76,11 @@
       </div>
       <div class="md:hidden block border border-slate-200">
         <div class="border-b border-slate-200 p-6 flex items-center">
-          <div class="p-6 bg-black text-white w-full">Planung (5 Tage)</div>
+          <div class="p-6 bg-black text-white w-full">Planung (3 Tage)</div>
         </div>
         <div class="border-b border-slate-200 p-6 flex items-center">
           <div class="p-6 bg-black text-white w-full">
             Entwicklung (10 Tage)
-          </div>
-        </div>
-
-        <div class="border-b border-slate-200 p-6 flex items-center">
-          <div class="p-6 bg-black text-white w-full">
-            Testen & Übergabe (3 Tage)
           </div>
         </div>
       </div>

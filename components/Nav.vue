@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-white flex py-2 z-50 h-screen fixed top-0 pt-10 right-0 hidden md:block pl-6"
+    class="bg-white flex py-2 z-50 h-screen fixed top-0 pt-10 right-0 hidden lg:block pl-6"
     style="width: 300px"
   >
     <div class="flex flex-col flex gap-2 text-black h-full">
@@ -32,7 +32,7 @@
       </NuxtLink>
     </div>
   </header>
-  <header class="block md:hidden fixed bottom-6 right-6">
+  <header class="block lg:hidden fixed bottom-6 right-6">
     <Drawer>
       <template v-slot:trigger>
         <Button type="black">

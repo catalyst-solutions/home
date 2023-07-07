@@ -43,7 +43,14 @@ export default {
 .text-load {
   animation: text-load 1s ease;
   max-width: calc(100% - 40px);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
   word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 @keyframes text-load {

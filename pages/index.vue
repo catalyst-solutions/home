@@ -3,15 +3,11 @@
     <!-- header-->
     <div class="flex flex-col gap-5 pb-6" style="min-height: 80vh">
       <div class="flex flex-col gap-6">
-        <div class="flex flex-col">
+        <div class="flex flex-col" style="max-width: 1200px">
           <Text size="title">
-            <span>
-              Wir sind eine Design Agentur mit <br />
-              Fokus auf der Entwicklung von digitalen <br />
-              Unternehmensauftritten die <br />Kunden überzeugen
-            </span>
+            Wir sind eine Design Agentur mit Fokus auf der Entwicklung von
+            digitalen Unternehmensauftritten die Kunden überzeugen
           </Text>
-          <br />
         </div>
       </div>
     </div>
@@ -43,7 +39,7 @@
 
       <div class="flex flex-col gap-12">
         <div
-          class="grid md:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
+          class="grid lg:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
         >
           <div class="w-1/3">
             <Badge><div class="text-2xl">01 Planung</div> </Badge>
@@ -57,7 +53,7 @@
         </div>
 
         <div
-          class="grid md:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
+          class="grid lg:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
         >
           <Badge><div class="text-2xl">02 Evaluation & Design</div> </Badge>
 
@@ -68,7 +64,7 @@
           </Text>
         </div>
 
-        <div class="grid md:grid-cols-2 pb-12 items-center gap-6">
+        <div class="grid lg:grid-cols-2 pb-12 items-center gap-6">
           <Badge><div class="text-2xl">03 Entwicklung</div> </Badge>
 
           <Text>

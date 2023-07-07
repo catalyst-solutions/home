@@ -9,12 +9,12 @@
       ></div>
       <div
         style="width: calc(100vw - 300px - 1rem)"
-        class="min-h-screen flex flex-col gap-20 md:block hidden"
+        class="min-h-screen flex flex-col gap-20 lg:block hidden"
       >
         <slot />
       </div>
 
-      <div class="min-h-screen flex flex-col gap-20 block md:hidden">
+      <div class="min-h-screen flex flex-col gap-20 block lg:hidden">
         <slot />
       </div>
       <Nav />
