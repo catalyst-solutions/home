@@ -7,8 +7,8 @@
           <Text size="title">
             <span>
               Wir sind eine Design Agentur mit <br />
-              Fokus auf der Entwicklung von digitalen Unternehmensauftritten<br />
-              die Kunden überzeugen
+              Fokus auf der Entwicklung von digitalen <br />
+              Unternehmensauftritten die <br />Kunden überzeugen
             </span>
           </Text>
           <br />
