@@ -11,7 +11,7 @@
       >
         <TextLink color="#fff" to="/"> Home </TextLink>
         <TextLink color="#fff" to="/studies"> Case Studies </TextLink>
-        <TextLink color="#fff" to="/privacy-policy"> Privacy Policy </TextLink>
+        <TextLink color="#fff" to="/imprint"> Impressum </TextLink>
         <a class="md:ml-auto" href="mailto:contact@csol.dev">
           <TextLink color="#fff"> contact@csol.dev </TextLink>
         </a>
