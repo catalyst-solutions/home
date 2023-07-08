@@ -9,7 +9,7 @@
         class="text-xl text-load"
         :class="[$route.name == 'index' ? 'text-black' : 'text-slate-400']"
       >
-        Home
+        {{ i18n.t("home") }}
       </NuxtLink>
       <NuxtLink
         to="/studies"
@@ -18,23 +18,28 @@
           $route.name.includes('studies') ? 'text-black' : 'text-slate-400',
         ]"
       >
-        Case Studies
+        {{ i18n.t("studies") }}
       </NuxtLink>
       <NuxtLink
         to="/contact"
         class="text-xl text-load"
         :class="[$route.name == 'contact' ? 'text-black' : 'text-slate-400']"
       >
-        Kontakt
+        {{ i18n.t("contact") }}
       </NuxtLink>
-      <div class="mt-10">
-        <Text class="text-black text-xl" v-if="locale.includes('de')">
-          <span class="cursor-pointer" @click="locale = 'en'"> English </span>
-        </Text>
-        <Text class="text-black text-xl" v-if="locale.includes('en')">
-          <span class="cursor-pointer" @click="locale = 'de'"> Deutsch </span>
-        </Text>
-      </div>
+
+      <select
+        class="text-xl text-slate-400 mt-20 appearance-none"
+        v-model="$i18n.locale"
+      >
+        <option
+          v-for="(lang, i) in ['de', 'en']"
+          :key="`Lang${i}`"
+          :value="lang"
+        >
+          {{ lang.toUpperCase() }}
+        </option>
+      </select>
 
       <NuxtLink class="mt-auto mb-10" to="/">
         <img class="w-16 opacity-70" src="/logo.svg" alt="logo" />
@@ -58,5 +63,21 @@
 </template>
 
 <script setup>
-const { locale } = useI18n();
+import { useI18n } from "#i18n";
+const i18n = useI18n();
 </script>
+
+<i18n lang="json">
+{
+  "en": {
+    "home": "Home",
+    "studies": "Case studies",
+    "contact": "Contact"
+  },
+  "de": {
+    "home": "Home",
+    "studies": "Case studies",
+    "contact": "Kontakt"
+  }
+}
+</i18n>

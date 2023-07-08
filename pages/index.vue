@@ -75,7 +75,7 @@
           </Badge>
 
           <Text>
-            {{ i18n.t("csolWay.steps.step1.text") }}
+            {{ i18n.t("csolWay.steps.step3.text") }}
           </Text>
         </div>
       </div>
@@ -89,7 +89,7 @@ const i18n = useI18n();
 
 <i18n lang="json">
 {
-  "en": {
+  "de": {
     "header": "Wir sind eine Design Agentur mit Fokus auf der Entwicklung von digitalen Unternehmensauftritten die Kunden überzeugen",
     "cards": {
       "pm": {
@@ -123,8 +123,39 @@ const i18n = useI18n();
       }
     }
   },
-  "de": {
-    "header": "We are a design agency focusing on developing digital corporate appearances that clients love"
+  "en": {
+    "header": "We are a design agency focusing on developing digital corporate appearances that clients love",
+    "cards": {
+      "pm": {
+        "project": "Party Manager",
+        "title": "Event Management",
+        "info": "An all-in-one Solution to ticket management"
+      },
+      "csol": {
+        "project": "CSOL Homepage",
+        "title": "That's us!",
+        "info": "A modern website for our agency"
+      }
+    },
+    "csolWay": {
+      "heading1": "It's hard to achieve great design",
+      "heading2": "Luckily we have experience!",
+      "steps": {
+        "step1": {
+          "title": "01 Planning",
+          "text": "We'll talk with you via online or in-person meetings. In this phase it's cruzial to outline the projects scope. To do so we'll create mood-boards for instance."
+        },
+        "step2": {
+          "title": "02 Research & Design",
+          "text": "Our team will think about your project and finalise our concept. In this phase we may show you initial prototypes for your project."
+        },
+
+        "step3": {
+          "title": "03 Development",
+          "text": "Let's get to work! We will build out the accepted-on prototype. Once development is done we'll hand over the final product and continue to help with maintaining it."
+        }
+      }
+    }
   }
 }
 </i18n>
