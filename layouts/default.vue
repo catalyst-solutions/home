@@ -27,10 +27,16 @@
 <script>
 import "animate.css";
 useSeoMeta({
-  title: "CSOL",
-  ogTitle: "CSOL",
-  description: "CSOL is a design agency",
-  ogDescription: "CSOL is a design agency",
+  title: "CSOL is a design agency",
+  ogTitle: "CSOL is a design agency",
+  description:
+    "We strave to bring you unique products that impress your clients",
+  ogDescription:
+    "We strave to bring you unique products that impress your clients",
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
+  charset: "utf-8",
+
   ogImage: "/logo.svg",
   twitterCard: "/logo.svg",
 });
