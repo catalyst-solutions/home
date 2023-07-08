@@ -16,6 +16,7 @@
     "typescript": "latest"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^8.0.0-beta.13",
     "animate.css": "^4.1.1",
     "feather-icons": "^4.29.0",
     "material-symbols": "^0.9.0",

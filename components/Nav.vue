@@ -27,6 +27,15 @@
       >
         Kontakt
       </NuxtLink>
+      <div class="mt-10">
+        <Text class="text-black text-xl" v-if="locale.includes('de')">
+          <span class="cursor-pointer" @click="locale = 'en'"> English </span>
+        </Text>
+        <Text class="text-black text-xl" v-if="locale.includes('en')">
+          <span class="cursor-pointer" @click="locale = 'de'"> Deutsch </span>
+        </Text>
+      </div>
+
       <NuxtLink class="mt-auto mb-10" to="/">
         <img class="w-16 opacity-70" src="/logo.svg" alt="logo" />
       </NuxtLink>
@@ -47,3 +56,7 @@
     </Drawer>
   </header>
 </template>
+
+<script setup>
+const { locale } = useI18n();
+</script>
