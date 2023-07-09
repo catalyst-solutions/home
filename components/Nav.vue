@@ -54,9 +54,21 @@
         </Button>
       </template>
       <Wrapper class="flex flex-col gap-6 items-center">
-        <TextLink to="/"> Home </TextLink>
-        <TextLink to="/studies"> Case Studies </TextLink>
-        <TextLink to="/contact"> Kontakt </TextLink>
+        <TextLink to="/"> {{ i18n.t("home") }} </TextLink>
+        <TextLink to="/studies"> {{ i18n.t("studies") }}</TextLink>
+        <TextLink to="/contact"> {{ i18n.t("contact") }} </TextLink>
+        <select
+          class="text-xl text-slate-400 mt-10 appearance-none"
+          v-model="$i18n.locale"
+        >
+          <option
+            v-for="(lang, i) in ['de', 'en']"
+            :key="`Lang${i}`"
+            :value="lang"
+          >
+            {{ lang.toUpperCase() }}
+          </option>
+        </select>
       </Wrapper>
     </Drawer>
   </header>
