@@ -10,8 +10,12 @@
         class="flex flex-col md:flex-row gap-12 items-center text-center text-white mt-auto pb-6"
       >
         <TextLink color="#fff" to="/"> Home </TextLink>
-        <TextLink color="#fff" to="/studies"> Case Studies </TextLink>
-        <TextLink color="#fff" to="/imprint"> Impressum </TextLink>
+        <TextLink color="#fff" to="/studies">
+          {{ i18n.t("studies") }}
+        </TextLink>
+        <TextLink color="#fff" to="/imprint">
+          {{ i18n.t("imprint") }}
+        </TextLink>
         <a class="md:ml-auto" href="mailto:contact@csol.dev">
           <TextLink color="#fff"> contact@csol.dev </TextLink>
         </a>
@@ -42,3 +46,20 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useI18n } from "#i18n";
+const i18n = useI18n();
+</script>
+
+<i18n lang="json">
+{
+  "de": {
+    "studies": "Fallstudien",
+    "imprint": "Impressum"
+  },
+  "en": {
+    "studies": "Case Studies",
+    "imprint": "Imprint"
+  }
+}
+</i18n>

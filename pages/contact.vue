@@ -3,21 +3,21 @@
     <div>
       <Text size="title">
         <span class="animate__animated animate__fadeInDown">
-          Schreiben Sie uns
+          {{ i18n.t("header") }}
         </span>
       </Text>
       <div class="p-10"></div>
     </div>
     <div class="flex flex-col gap-12">
       <div class="flex flex-col gap-6">
-        <Text size="heading">Schreiben wir</Text>
+        <Text size="heading">{{ i18n.t("text1") }}</Text>
 
         <div class="flex gap-6 flex-col md:flex-row">
           <a
             href="https://ik0l1b2fghp.typeform.com/to/rCLm4h5t"
             target="_blank"
           >
-            <Button type="primary"> Via Fragebogen </Button>
+            <Button type="primary"> {{ i18n.t("questionnaire") }} </Button>
           </a>
           <a href="mailto:contact@csol.dev">
             <Button type="black"> Via Email </Button>
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="flex flex-col gap-6">
-        <Text size="heading">Reden wir</Text>
+        <Text size="heading">{{ i18n.t("text2") }}</Text>
 
         <div class="flex flex-col gap-2">
           <div class="flex border-b border-slate-200">
@@ -43,3 +43,25 @@
     <div class="p-10"></div>
   </Wrapper>
 </template>
+
+<script setup>
+import { useI18n } from "#i18n";
+const i18n = useI18n();
+</script>
+
+<i18n lang="json">
+{
+  "de": {
+    "header": "Schreiben Sie uns",
+    "text1": "Schreiben Sie uns",
+    "text2": "Sprechen Sie mit uns",
+    "questionnaire": "Via Fragebogen"
+  },
+  "en": {
+    "header": "Let's talk",
+    "text1": "Write us",
+    "text2": "Talk with us",
+    "questionnaire": "Via Questionnaire"
+  }
+}
+</i18n>

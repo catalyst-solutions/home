@@ -88,7 +88,7 @@ const i18n = useI18n();
   },
   "de": {
     "home": "Home",
-    "studies": "Case studies",
+    "studies": "Fallstudien",
     "contact": "Kontakt"
   }
 }
