@@ -95,7 +95,7 @@ const i18n = useI18n();
       "pm": {
         "project": "Party Manager",
         "title": "Event Management",
-        "info": "Ein all-in-one System zum management von Tickets"
+        "info": "Ein all-in-one System zum Management von Tickets"
       },
       "csol": {
         "project": "CSOL Homepage",
@@ -124,12 +124,12 @@ const i18n = useI18n();
     }
   },
   "en": {
-    "header": "We are a design agency focusing on developing digital corporate appearances that clients love",
+    "header": "We are a design agency with a focus on developing digital corporate appearances that your clients will love",
     "cards": {
       "pm": {
         "project": "Party Manager",
-        "title": "Event Management",
-        "info": "An all-in-one Solution to ticket management"
+        "title": "Event management",
+        "info": "An all-in-one Solution for ticket management"
       },
       "csol": {
         "project": "CSOL Homepage",
@@ -143,16 +143,16 @@ const i18n = useI18n();
       "steps": {
         "step1": {
           "title": "01 Planning",
-          "text": "We'll talk with you via online or in-person meetings. In this phase it's cruzial to outline the projects scope. To do so we'll create mood-boards for instance."
+          "text": "We'll talk about your goals via online or in-person meetings. In this phase, it's crucial to outline the scope of the project, so in this phase, we might come up with mood boards for instance."
         },
         "step2": {
           "title": "02 Research & Design",
-          "text": "Our team will think about your project and finalise our concept. In this phase we may show you initial prototypes for your project."
+          "text": "Our team will think about your project and finalize our concept. In this phase, we may show you initial prototypes for the final product."
         },
 
         "step3": {
           "title": "03 Development",
-          "text": "Let's get to work! We will build out the accepted-on prototype. Once development is done we'll hand over the final product and continue to help with maintaining it."
+          "text": "Let's get to work! We will build out the agreed-on prototype. Once development is done we'll hand over the final product and continue to help with maintaining it."
         }
       }
     }
