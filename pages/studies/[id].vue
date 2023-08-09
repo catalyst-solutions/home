@@ -21,13 +21,13 @@
 
         <div class="flex grid grid-cols-2 mt-20">
           <div class="flex flex-col">
-            <Text size="heading">By</Text>
-            <Text>Joshua</Text>
+            <Text size="heading">Written by</Text>
+            <Text> {{ entry.getField("published_by") }}</Text>
           </div>
 
           <div class="flex flex-col">
             <Text size="heading">Published</Text>
-            <Text>7 Jul 2023</Text>
+            <Text> {{ entry.getField("published_at") }}</Text>
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@ export default {
   data() {
     return {
       client: undefined,
-      entry: {},
+      entry: undefined,
     };
   },
   async mounted() {
