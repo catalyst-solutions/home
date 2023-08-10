@@ -26,7 +26,7 @@
           </div>
 
           <div class="flex flex-col">
-            <Text size="heading">Published</Text>
+            <Text size="heading">Published at</Text>
             <Text> {{ entry.getField("published_at") }}</Text>
           </div>
         </div>
@@ -39,7 +39,7 @@
           :src="i.fields.image[$i18n.locale].source_url"
         ></Image>
         <div
-          class="grid grid-cols-2 border-b pb-20"
+          class="grid md:grid-cols-2 gap-6 border-b pb-20"
           v-if="i.fields.text[$i18n.locale]"
         >
           <Text size="heading">

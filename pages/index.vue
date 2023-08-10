@@ -1,7 +1,7 @@
 <template>
   <Wrapper>
     <!-- header-->
-    <div class="flex flex-col gap-5 pb-6" style="min-height: 80vh">
+    <div class="flex flex-col gap-6 pb-6" style="min-height: 80vh">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col" style="max-width: 1200px">
           <Text size="title">
@@ -14,19 +14,26 @@
 
   <div class="grid md:grid-cols-2">
     <Card
-      to="/studies/pm"
-      src="https://images.unsplash.com/photo-1635070636690-d887c1a77e7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
-      :project="i18n.t('cards.pm.project')"
-      :title="i18n.t('cards.pm.title')"
-      :info="i18n.t('cards.pm.info')"
-    />
-    <Card
-      to="/studies/csol"
-      src="/img/csol.svg"
-      :project="i18n.t('cards.csol.project')"
-      :title="i18n.t('cards.csol.title')"
-      :info="i18n.t('cards.csol.info')"
-    />
+      v-for="i in studies.data"
+      :src="
+        i.fields.header_image[$i18n.locale]
+          ? i.fields.header_image[$i18n.locale].source_url
+          : ''
+      "
+      :title="i.fields.title[$i18n.locale]"
+      :info="i.fields.subtitle[$i18n.locale]"
+      :to="'/studies/' + i.fields.slug[$i18n.locale]"
+    >
+    </Card>
+  </div>
+
+  <div v-if="loading" class="grid md:grid-cols-2 gap-2">
+    <Loader style="min-height: 300px; min-width: 100%"></Loader>
+    <Loader style="min-height: 300px; min-width: 100%"></Loader>
+    <Loader style="min-height: 300px; min-width: 100%"></Loader>
+    <Loader style="min-height: 300px; min-width: 100%"></Loader>
+
+    <Loader style="min-height: 300px; min-width: 100%"></Loader>
   </div>
 
   <!-- how we work-->
@@ -91,18 +98,6 @@ const i18n = useI18n();
 {
   "de": {
     "header": "Wir sind eine Design Agentur mit Fokus auf der Entwicklung von digitalen Unternehmensauftritten die Kunden überzeugen",
-    "cards": {
-      "pm": {
-        "project": "Party Manager",
-        "title": "Event Management",
-        "info": "Ein all-in-one System zum Management von Tickets"
-      },
-      "csol": {
-        "project": "CSOL Homepage",
-        "title": "Sie sind hier!",
-        "info": "Eine moderne Website für unsere Agentur"
-      }
-    },
     "csolWay": {
       "heading1": "Gutes Design ist schwer",
       "heading2": "Wir haben Erfahrung!",
@@ -125,18 +120,7 @@ const i18n = useI18n();
   },
   "en": {
     "header": "We are a design agency with a focus on developing digital corporate appearances that your clients will love",
-    "cards": {
-      "pm": {
-        "project": "Party Manager",
-        "title": "Event management",
-        "info": "An all-in-one Solution for ticket management"
-      },
-      "csol": {
-        "project": "CSOL Homepage",
-        "title": "That's us!",
-        "info": "A modern website for our agency"
-      }
-    },
+
     "csolWay": {
       "heading1": "It's hard to achieve great design",
       "heading2": "Luckily we have experience!",
@@ -159,3 +143,36 @@ const i18n = useI18n();
   }
 }
 </i18n>
+<script>
+import HudduClient from "huddu-node";
+export default {
+  data() {
+    return {
+      loading: true,
+      client: undefined,
+      studies: { data: [] },
+    };
+  },
+
+  async mounted() {
+    this.client = new HudduClient({
+      token:
+        "ot_9875a9188752bd4fa9c5db594f9bf99aff9ee70bd70a2ab61d7c2c5d067f0f13",
+      project: "prj_5a4bf284740e436bb16b0af17e566ccc",
+      organization: "org_a1f85701a85149caa30e06cddff1f30a",
+
+      environment: "main",
+      locale: this.$i18n.locale,
+    });
+
+    await this.client.init();
+    this.getStudies();
+  },
+  methods: {
+    async getStudies() {
+      this.studies = await this.client.entries.list();
+      this.loading = false;
+    },
+  },
+};
+</script>
