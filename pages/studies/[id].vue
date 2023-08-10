@@ -38,11 +38,20 @@
           v-if="i.fields.image[$i18n.locale]"
           :src="i.fields.image[$i18n.locale].source_url"
         ></Image>
-        <SkyText>
-          {{ i.fields.text[$i18n.locale] }}
-        </SkyText>
+        <div
+          class="grid grid-cols-2 border-b pb-20"
+          v-if="i.fields.text[$i18n.locale]"
+        >
+          <Text size="heading">
+            {{ i.fields.title[$i18n.locale] }}
+          </Text>
+          <Text>
+            {{ i.fields.text[$i18n.locale] }}
+          </Text>
+        </div>
       </div>
     </div>
+    <div class="p-10"></div>
   </Wrapper>
 </template>
 
