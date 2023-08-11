@@ -10,30 +10,33 @@
       <div class="flex flex-col">
         <Text size="title">
           <span class="animate__animated animate__fadeInDown">
-            {{ entry.getField("title") }}
+            {{ entry.fields.title[$i18n.locale] }}
           </span>
         </Text>
         <Text size="title-gray">
           <span class="animate__animated animate__fadeInDown animate__delay-1s">
-            {{ entry.getField("subtitle") }}
+            {{ entry.fields.subtitle[$i18n.locale] }}
           </span>
         </Text>
 
         <div class="flex grid grid-cols-2 mt-20">
           <div class="flex flex-col">
             <Text size="heading">Written by</Text>
-            <Text> {{ entry.getField("published_by") }}</Text>
+            <Text> {{ entry.fields.published_by[$i18n.locale] }}</Text>
           </div>
 
           <div class="flex flex-col">
             <Text size="heading">Published at</Text>
-            <Text> {{ entry.getField("published_at") }}</Text>
+            <Text> {{ entry.fields.published_at[$i18n.locale] }}</Text>
           </div>
         </div>
       </div>
 
-      <Image :src="entry.getField('header_image').source_url"></Image>
-      <div v-for="i in entry.fields.sections.entries">
+      <Image :src="entry.fields.header_image[$i18n.locale].source_url"></Image>
+      <div
+        v-for="i in entry.fields.sections.entries"
+        class="flex flex-col gap-10"
+      >
         <Image
           v-if="i.fields.image[$i18n.locale]"
           :src="i.fields.image[$i18n.locale].source_url"
@@ -46,7 +49,7 @@
             {{ i.fields.title[$i18n.locale] }}
           </Text>
           <Text>
-            {{ i.fields.text[$i18n.locale] }}
+            <div v-html="i.fields.text[$i18n.locale]"></div>
           </Text>
         </div>
       </div>
@@ -77,7 +80,11 @@ export default {
 
     await this.client.init();
 
-    this.entry = await this.client.entries.get();
+    let filter = {};
+
+    filter["fields.slug." + [this.$i18n.locale]] = this.$route.params.id;
+    console.log(filter);
+    this.entry = await this.client.entries.get({ filter });
   },
 
   methods: {},

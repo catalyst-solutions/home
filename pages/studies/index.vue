@@ -88,6 +88,7 @@ export default {
       let fieldName = `fields.title.${this.$i18n.locale}`;
       filter[fieldName] = {
         $regex: this.search,
+        $options: "i",
       };
 
       this.studies = await this.client.entries.list({

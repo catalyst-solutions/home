@@ -37,7 +37,7 @@
   </div>
 
   <!-- how we work-->
-  <div>
+  <div class="pt-10">
     <Wrapper>
       <Text size="title-gray"> {{ i18n.t("csolWay.heading1") }} </Text>
       <Text size="title"> {{ i18n.t("csolWay.heading2") }}</Text>
