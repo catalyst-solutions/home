@@ -4,7 +4,7 @@
       <TextLink to="/studies">
         <div class="flex items-center gap-2">
           <Icon icon="arrow_back" />
-          Case studies
+          {{ i18n.t("caseStudies") }}
         </div>
       </TextLink>
       <div class="flex flex-col">
@@ -21,12 +21,12 @@
 
         <div class="flex grid grid-cols-2 mt-20">
           <div class="flex flex-col">
-            <Text size="heading">Written by</Text>
+            <Text size="heading"> {{ i18n.t("writenBy") }}</Text>
             <Text> {{ entry.fields.published_by[$i18n.locale] }}</Text>
           </div>
 
           <div class="flex flex-col">
-            <Text size="heading">Published at</Text>
+            <Text size="heading"> {{ i18n.t("publishedAt") }}</Text>
             <Text> {{ entry.fields.published_at[$i18n.locale] }}</Text>
           </div>
         </div>
@@ -90,3 +90,22 @@ export default {
   methods: {},
 };
 </script>
+
+<script setup>
+import { useI18n } from "#i18n";
+const i18n = useI18n();
+</script>
+<i18n lang="json">
+{
+  "en": {
+    "caseStudies": "Case studies",
+    "writenBy": "Writen by",
+    "publishedAt": "Published at"
+  },
+  "de": {
+    "caseStudies": "Fallstudien",
+    "writenBy": "Geschrieben von",
+    "publishedAt": "Veröffentlicht am"
+  }
+}
+</i18n>
