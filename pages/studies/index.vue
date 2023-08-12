@@ -25,14 +25,14 @@
         >
         </Card>
       </div>
-    </div>
-    <div v-if="loading" class="grid md:grid-cols-2 gap-2">
-      <Loader style="min-height: 300px; min-width: 100%"></Loader>
-      <Loader style="min-height: 300px; min-width: 100%"></Loader>
-      <Loader style="min-height: 300px; min-width: 100%"></Loader>
-      <Loader style="min-height: 300px; min-width: 100%"></Loader>
+      <div v-if="loading" class="grid md:grid-cols-2 gap-2">
+        <Loader style="min-height: 300px; min-width: 100%"></Loader>
+        <Loader style="min-height: 300px; min-width: 100%"></Loader>
+        <Loader style="min-height: 300px; min-width: 100%"></Loader>
+        <Loader style="min-height: 300px; min-width: 100%"></Loader>
 
-      <Loader style="min-height: 300px; min-width: 100%"></Loader>
+        <Loader style="min-height: 300px; min-width: 100%"></Loader>
+      </div>
     </div>
     <div v-if="!studies.length" class="flex">
       <div class="text-center m-auto flex flex-col gap-6 w-80 items-center">
