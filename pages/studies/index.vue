@@ -3,26 +3,28 @@
     <Wrapper>
       <Text size="title"> {{ i18n.t("header") }} </Text>
     </Wrapper>
-    <input
-      v-model="search"
-      placeholder="Search..."
-      class="bg-transparent border-b focus:border-black focus:outline-none focus:ring-b focus:ring-black p-6"
-      @change="getStudies()"
-    />
+    <div class="flex flex-col">
+      <input
+        v-model="search"
+        placeholder="Search..."
+        class="bg-transparent border-t border-l border-r focus:border-black focus:outline-none focus:ring-b focus:ring-black p-6"
+        @change="getStudies()"
+      />
 
-    <div class="grid md:grid-cols-2">
-      <Card
-        v-for="i in studies.data"
-        :src="
-          i.fields.header_image[$i18n.locale]
-            ? i.fields.header_image[$i18n.locale].source_url
-            : ''
-        "
-        :title="i.fields.title[$i18n.locale]"
-        :info="i.fields.subtitle[$i18n.locale]"
-        :to="'/studies/' + i.fields.slug[$i18n.locale]"
-      >
-      </Card>
+      <div class="grid md:grid-cols-2">
+        <Card
+          v-for="i in studies.data"
+          :src="
+            i.fields.header_image[$i18n.locale]
+              ? i.fields.header_image[$i18n.locale].source_url
+              : ''
+          "
+          :title="i.fields.title[$i18n.locale]"
+          :info="i.fields.subtitle[$i18n.locale]"
+          :to="'/studies/' + i.fields.slug[$i18n.locale]"
+        >
+        </Card>
+      </div>
     </div>
     <div v-if="loading" class="grid md:grid-cols-2 gap-2">
       <Loader style="min-height: 300px; min-width: 100%"></Loader>
