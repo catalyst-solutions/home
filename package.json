@@ -19,7 +19,7 @@
     "@nuxtjs/i18n": "^8.0.0-beta.13",
     "animate.css": "^4.1.1",
     "feather-icons": "^4.29.0",
-    "huddu-node": "^1.2.7",
+    "huddu-node": "^1.2.9",
     "material-symbols": "^0.9.0",
     "vue": "^3.3.4",
     "vue-feather": "^2.0.0"

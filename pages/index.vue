@@ -16,8 +16,8 @@
     <Card
       v-for="i in studies.data"
       :src="
-        i.fields.header_image[$i18n.locale]
-          ? i.fields.header_image[$i18n.locale].source_url
+        i.fields.header_img[$i18n.locale]
+          ? i.fields.header_img[$i18n.locale].source_url
           : ''
       "
       :title="i.fields.title[$i18n.locale]"
@@ -158,11 +158,10 @@ export default {
     this.client = new HudduClient({
       token:
         "ot_9875a9188752bd4fa9c5db594f9bf99aff9ee70bd70a2ab61d7c2c5d067f0f13",
-      project: "prj_5a4bf284740e436bb16b0af17e566ccc",
+      project: "prj_d16a58832d3c4541926e1b7de6e67812",
       organization: "org_a1f85701a85149caa30e06cddff1f30a",
 
       environment: "main",
-      locale: this.$i18n.locale,
     });
 
     await this.client.init();
