@@ -97,7 +97,7 @@ const i18n = useI18n();
 <i18n lang="json">
 {
   "de": {
-    "header": "Wir sind eine Design Agentur mit Fokus auf der Entwicklung von digitalen Unternehmensauftritten die Kunden überzeugen",
+    "header": "Wir sind eine Design Agentur mit Fokus auf der Entwicklung von digitalen Unternehmensauftritten, die Kunden überzeugen",
     "csolWay": {
       "heading1": "Gutes Design ist schwer",
       "heading2": "Wir haben Erfahrung!",
