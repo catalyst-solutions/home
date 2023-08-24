@@ -26,7 +26,7 @@
           </div>
 
           <div class="flex flex-col">
-            <Text size="heading"> {{ i18n.t("publishedAt") }}</Text>
+            <Text size="heading"> {{ i18n.t("published") }}</Text>
             <Text> {{ entry.fields.published_at[$i18n.locale] }}</Text>
           </div>
         </div>
@@ -100,12 +100,12 @@ const i18n = useI18n();
   "en": {
     "caseStudies": "Case studies",
     "writenBy": "Writen by",
-    "publishedAt": "Published at"
+    "published": "Published on"
   },
   "de": {
     "caseStudies": "Fallstudien",
     "writenBy": "Geschrieben von",
-    "publishedAt": "Veröffentlicht am"
+    "published": "Veröffentlicht am"
   }
 }
 </i18n>
