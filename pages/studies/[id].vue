@@ -38,8 +38,8 @@
         class="flex flex-col gap-10"
       >
         <Image
-          v-if="i.fields.image[$i18n.locale]"
-          :src="i.fields.image[$i18n.locale].source_url"
+          v-if="i.fields.image.value"
+          :src="i.fields.image.value.source_url"
         ></Image>
         <div
           class="grid md:grid-cols-2 gap-6 border-b pb-20"
