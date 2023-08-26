@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <Image :src="entry.fields.header_img[$i18n.locale].source_url"></Image>
+      <Image :src="entry.fields.header_img.value.source_url"></Image>
       <div
         v-for="i in entry.fields.sections.entries"
         class="flex flex-col gap-10"
@@ -82,8 +82,7 @@ export default {
 
     let filter = {};
 
-    filter["fields.slug." + [this.$i18n.locale]] = this.$route.params.id;
-    console.log(filter);
+    filter["fields.slug.value"] = this.$route.params.id;
     this.entry = await this.client.entries.get({ filter });
   },
 

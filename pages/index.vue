@@ -16,13 +16,11 @@
     <Card
       v-for="i in studies.data"
       :src="
-        i.fields.header_img[$i18n.locale]
-          ? i.fields.header_img[$i18n.locale].source_url
-          : ''
+        i.fields.header_img.value ? i.fields.header_img.value.source_url : ''
       "
       :title="i.fields.title[$i18n.locale]"
       :info="i.fields.subtitle[$i18n.locale]"
-      :to="'/studies/' + i.fields.slug[$i18n.locale]"
+      :to="'/studies/' + i.fields.slug.value"
     >
     </Card>
   </div>
