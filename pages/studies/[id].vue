@@ -32,24 +32,33 @@
         </div>
       </div>
 
-      <Image :src="entry.fields.header_img.value.source_url"></Image>
+      <Image :src="entry.fields.header_img.value.asset.source_url"></Image>
       <div
         v-for="i in entry.fields.sections.entries"
         class="flex flex-col gap-10"
       >
+        <div v-if="i.entry.fields.image.value">
+          <div style="display: none">
+            {{ getImage(i.entry.fields.image.value.asset) }}
+          </div>
+        </div>
         <Image
-          v-if="i.fields.image.value"
-          :src="i.fields.image.value.source_url"
+          v-if="
+            i.entry.fields.image.value &&
+            i.entry.fields.image.value.asset &&
+            images[i.entry.fields.image.value.asset].source_url
+          "
+          :src="images[i.entry.fields.image.value.asset].source_url"
         ></Image>
         <div
           class="grid md:grid-cols-2 gap-6 border-b pb-20"
-          v-if="i.fields.text[$i18n.locale]"
+          v-if="i.entry.fields.text[$i18n.locale]"
         >
           <Text size="heading">
-            {{ i.fields.title[$i18n.locale] }}
+            {{ i.entry.fields.title[$i18n.locale] }}
           </Text>
           <Text>
-            <div v-html="i.fields.text[$i18n.locale]"></div>
+            <div v-html="i.entry.fields.text[$i18n.locale]"></div>
           </Text>
         </div>
       </div>
@@ -65,7 +74,18 @@ export default {
     return {
       client: undefined,
       entry: undefined,
+      images: {},
     };
+  },
+  methods: {
+    async getImage(id) {
+      this.images[id] = await this.client.assets.get({
+        filter: {
+          id,
+        },
+      });
+      return "";
+    },
   },
   async mounted() {
     this.client = new HudduClient({
@@ -85,8 +105,6 @@ export default {
     filter["fields.slug.value"] = this.$route.params.id;
     this.entry = await this.client.entries.get({ filter });
   },
-
-  methods: {},
 };
 </script>
 

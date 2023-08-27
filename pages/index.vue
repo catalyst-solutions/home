@@ -16,7 +16,9 @@
     <Card
       v-for="i in studies.data"
       :src="
-        i.fields.header_img.value ? i.fields.header_img.value.source_url : ''
+        i.fields.header_img.value.asset
+          ? i.fields.header_img.value.asset.source_url
+          : ''
       "
       :title="i.fields.title[$i18n.locale]"
       :info="i.fields.subtitle[$i18n.locale]"

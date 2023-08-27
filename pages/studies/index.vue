@@ -15,15 +15,14 @@
         <Card
           v-for="i in studies.data"
           :src="
-            i.fields.header_img.value
-              ? i.fields.header_img.value.source_url
+            i.fields.header_img.value.asset
+              ? i.fields.header_img.value.asset.source_url
               : ''
           "
           :title="i.fields.title[$i18n.locale]"
           :info="i.fields.subtitle[$i18n.locale]"
           :to="'/studies/' + i.fields.slug.value"
-        >
-        </Card>
+        ></Card>
       </div>
       <div v-if="loading" class="grid md:grid-cols-2 gap-2">
         <Loader style="min-height: 300px; min-width: 100%"></Loader>
