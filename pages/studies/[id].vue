@@ -79,11 +79,13 @@ export default {
   },
   methods: {
     async getImage(id) {
-      this.images[id] = await this.client.assets.get({
-        filter: {
-          id,
-        },
-      });
+      if (!this.images[id]) {
+        this.images[id] = await this.client.assets.get({
+          filter: {
+            id,
+          },
+        });
+      }
       return "";
     },
   },
