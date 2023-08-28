@@ -161,7 +161,7 @@ export default {
       project: "prj_d16a58832d3c4541926e1b7de6e67812",
       organization: "org_a1f85701a85149caa30e06cddff1f30a",
 
-      environment: "main",
+      environment: "env_5dcd02ed243a47d8b6b2219a87a3dfe5",
     });
 
     await this.client.init();
@@ -169,7 +169,11 @@ export default {
   },
   methods: {
     async getStudies() {
-      this.studies = await this.client.entries.list();
+      this.studies = await this.client.entries.list({
+        filter: {
+          model: "mdl_fe00465f441d47e196a15b42f64be6de",
+        },
+      });
       this.loading = false;
     },
   },

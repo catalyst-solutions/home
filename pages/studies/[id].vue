@@ -96,8 +96,7 @@ export default {
       project: "prj_d16a58832d3c4541926e1b7de6e67812",
       organization: "org_a1f85701a85149caa30e06cddff1f30a",
 
-      environment: "main",
-      locale: this.$i18n.locale,
+      environment: "env_5dcd02ed243a47d8b6b2219a87a3dfe5",
     });
 
     await this.client.init();
