@@ -26,12 +26,12 @@
           </div>
         </TextLink>
         <div class="flex flex-col">
-          <Text size="title" mode="dark">
+          <Text v-if="entry.fields.title" size="title" mode="dark">
             <span class="animate__animated animate__fadeInDown">
               {{ entry.fields.title[$i18n.locale] }}
             </span>
           </Text>
-          <Text size="title-gray" mode="dark">
+          <Text v-if="entry.fields.subtitle" size="title-gray" mode="dark">
             <span
               class="animate__animated animate__fadeInDown animate__delay-1s"
             >
@@ -42,14 +42,14 @@
         <div class="flex grid md:grid-cols-2 mt-auto mb-20 gap-10">
           <div class="flex flex-col">
             <Text mode="dark" size="heading"> {{ i18n.t("writenBy") }}</Text>
-            <Text mode="dark">
+            <Text mode="dark" v-if="entry.fields.written_by">
               {{ entry.fields.written_by[$i18n.locale] }}</Text
             >
           </div>
 
           <div class="flex flex-col">
             <Text mode="dark" size="heading"> {{ i18n.t("published") }}</Text>
-            <Text mode="dark">
+            <Text mode="dark" v-if="entry.fields.published_at">
               {{ entry.fields.published_at[$i18n.locale] }}</Text
             >
           </div>
@@ -57,8 +57,10 @@
       </div>
 
       <div class="flex grid xl:grid-cols-2 gap-10">
-        <Text size="title"> {{ entry.fields.summary[$i18n.locale] }}</Text>
-        <div class="flex flex-wrap gap-2">
+        <Text size="title" v-if="entry.fields.summary">
+          {{ entry.fields.summary[$i18n.locale] }}</Text
+        >
+        <div v-if="entry.fields.tags" class="flex flex-wrap gap-2">
           <Badge v-for="i in entry.fields.tags[$i18n.locale].split(',')">
             {{ i }}
           </Badge>
@@ -66,6 +68,7 @@
       </div>
 
       <div
+        v-if="entry.fields.sections"
         v-for="i in entry.fields.sections.entries"
         class="grid xl:grid-cols-2 gap-10"
       >
