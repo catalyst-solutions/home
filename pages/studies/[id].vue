@@ -1,59 +1,91 @@
 <template>
-  <Wrapper v-if="entry">
-    <div class="flex flex-col gap-20">
-      <TextLink to="/studies">
-        <div class="flex items-center gap-2">
-          <Icon icon="arrow_back" />
-          {{ i18n.t("caseStudies") }}
-        </div>
-      </TextLink>
-      <div class="flex flex-col">
-        <Text size="title">
-          <span class="animate__animated animate__fadeInDown">
-            {{ entry.fields.title[$i18n.locale] }}
-          </span>
-        </Text>
-        <Text size="title-gray">
-          <span class="animate__animated animate__fadeInDown animate__delay-1s">
-            {{ entry.fields.subtitle[$i18n.locale] }}
-          </span>
-        </Text>
+  <Wrapper v-if="entry.fields">
+    <div class="flex flex-col gap-28">
+      <div class="text-white flex flex-col gap-20 h-screen">
+        <div
+          style="
+            min-width: 100vw;
+            min-height: 100vh;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          "
+          :style="
+            'background-image:url(' +
+            entry.fields.header_img.value.asset.source_url +
+            ')'
+          "
+        ></div>
 
-        <div class="flex grid grid-cols-2 mt-20">
+        <TextLink to="/studies" mode="dark">
+          <div class="flex items-center gap-2">
+            <Icon icon="arrow_back" />
+            {{ i18n.t("caseStudies") }}
+          </div>
+        </TextLink>
+        <div class="flex flex-col">
+          <Text size="title" mode="dark">
+            <span class="animate__animated animate__fadeInDown">
+              {{ entry.fields.title[$i18n.locale] }}
+            </span>
+          </Text>
+          <Text size="title-gray" mode="dark">
+            <span
+              class="animate__animated animate__fadeInDown animate__delay-1s"
+            >
+              {{ entry.fields.subtitle[$i18n.locale] }}
+            </span>
+          </Text>
+        </div>
+        <div class="flex grid md:grid-cols-2 mt-auto mb-20 gap-10">
           <div class="flex flex-col">
-            <Text size="heading"> {{ i18n.t("writenBy") }}</Text>
-            <Text> {{ entry.fields.written_by[$i18n.locale] }}</Text>
+            <Text mode="dark" size="heading"> {{ i18n.t("writenBy") }}</Text>
+            <Text mode="dark">
+              {{ entry.fields.written_by[$i18n.locale] }}</Text
+            >
           </div>
 
           <div class="flex flex-col">
-            <Text size="heading"> {{ i18n.t("published") }}</Text>
-            <Text> {{ entry.fields.published_at[$i18n.locale] }}</Text>
+            <Text mode="dark" size="heading"> {{ i18n.t("published") }}</Text>
+            <Text mode="dark">
+              {{ entry.fields.published_at[$i18n.locale] }}</Text
+            >
           </div>
         </div>
       </div>
 
-      <Image :src="entry.fields.header_img.value.asset.source_url"></Image>
+      <div class="flex grid xl:grid-cols-2 gap-10">
+        <Text size="title"> {{ entry.fields.summary[$i18n.locale] }}</Text>
+        <div class="flex flex-wrap gap-2">
+          <Badge v-for="i in entry.fields.tags[$i18n.locale].split(',')">
+            {{ i }}
+          </Badge>
+        </div>
+      </div>
+
       <div
         v-for="i in entry.fields.sections.entries"
-        class="flex flex-col gap-10"
+        class="grid xl:grid-cols-2 gap-10"
       >
-        <div v-if="i.entry.fields.image.value">
-          <div style="display: none">
-            {{ getImage(i.entry.fields.image.value.asset) }}
-          </div>
-        </div>
-        <Image
+        <div
           v-if="
             i.entry.fields.image.value &&
-            i.entry.fields.image.value.asset &&
+            images[i.entry.fields.image.value.asset] &&
             images[i.entry.fields.image.value.asset].source_url
           "
-          :src="images[i.entry.fields.image.value.asset].source_url"
-        ></Image>
+        ></div>
+
         <div
-          class="grid md:grid-cols-2 gap-6 border-b pb-20"
+          class="flex flex-col gap-6 pb-20"
           v-if="i.entry.fields.text[$i18n.locale]"
         >
+          <div v-if="i.entry.fields.image.value">
+            <div style="display: none">
+              {{ getImage(i.entry.fields.image.value.asset) }}
+            </div>
+          </div>
           <Text size="heading">
             {{ i.entry.fields.title[$i18n.locale] }}
           </Text>
@@ -61,6 +93,15 @@
             <div v-html="i.entry.fields.text[$i18n.locale]"></div>
           </Text>
         </div>
+
+        <Image
+          v-if="
+            i.entry.fields.image.value &&
+            images[i.entry.fields.image.value.asset] &&
+            images[i.entry.fields.image.value.asset].source_url
+          "
+          :src="images[i.entry.fields.image.value.asset].source_url"
+        ></Image>
       </div>
     </div>
     <div class="p-10"></div>
@@ -73,7 +114,7 @@ export default {
   data() {
     return {
       client: undefined,
-      entry: undefined,
+      entry: {},
       images: {},
     };
   },

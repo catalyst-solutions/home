@@ -1,5 +1,7 @@
 <template>
-  <div class="text-black bg-neutral-200 text rounded-full px-6 py-2 w-max">
+  <div
+    class="text-black border border-gray-300 text rounded-full w-max h-max px-6 py-2 w-max"
+  >
     <slot />
   </div>
 </template>

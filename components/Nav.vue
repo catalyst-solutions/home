@@ -1,35 +1,35 @@
 <template>
   <header
-    class="bg-white flex py-2 z-50 h-screen fixed top-0 pt-10 right-0 hidden lg:block pl-6"
+    class="bg-white flex py-2 z-50 h-screen fixed top-0 pt-10 right-0 hidden lg:block pl-16"
     style="width: 300px"
   >
     <div class="flex flex-col flex gap-2 text-black h-full">
       <NuxtLink
         to="/"
-        class="text-xl text-load"
-        :class="[$route.name == 'index' ? 'text-black' : 'text-slate-400']"
+        class="text-2xl text-load"
+        :class="[$route.name == 'index' ? 'text-black' : 'text-gray-400']"
       >
         {{ i18n.t("home") }}
       </NuxtLink>
       <NuxtLink
         to="/studies"
-        class="text-xl text-load"
+        class="text-2xl text-load"
         :class="[
-          $route.name.includes('studies') ? 'text-black' : 'text-slate-400',
+          $route.name.includes('studies') ? 'text-black' : 'text-gray-400',
         ]"
       >
         {{ i18n.t("studies") }}
       </NuxtLink>
       <NuxtLink
         to="/contact"
-        class="text-xl text-load"
-        :class="[$route.name == 'contact' ? 'text-black' : 'text-slate-400']"
+        class="text-2xl text-load"
+        :class="[$route.name == 'contact' ? 'text-black' : 'text-gray-400']"
       >
         {{ i18n.t("contact") }}
       </NuxtLink>
 
       <select
-        class="text-xl text-slate-400 mt-20 appearance-none"
+        class="text-2xl text-gray-400 mt-20 appearance-none"
         v-model="$i18n.locale"
       >
         <option
@@ -58,7 +58,7 @@
         <TextLink to="/studies"> {{ i18n.t("studies") }}</TextLink>
         <TextLink to="/contact"> {{ i18n.t("contact") }} </TextLink>
         <select
-          class="text-xl text-slate-400 mt-10 appearance-none"
+          class="text-xl text-gray-400 mt-10 appearance-none"
           v-model="$i18n.locale"
         >
           <option

@@ -9,15 +9,15 @@
         style="position: absolute; bottom: 450px"
         class="flex flex-col md:flex-row gap-12 items-center text-center text-white mt-auto pb-6"
       >
-        <TextLink color="#fff" to="/"> Home </TextLink>
-        <TextLink color="#fff" to="/studies">
+        <TextLink mode="dark" to="/"> Home </TextLink>
+        <TextLink mode="dark" to="/studies">
           {{ i18n.t("studies") }}
         </TextLink>
-        <TextLink color="#fff" to="/imprint">
+        <TextLink mode="dark" to="/imprint">
           {{ i18n.t("imprint") }}
         </TextLink>
         <a class="md:ml-auto" href="mailto:contact@csol.dev">
-          <TextLink color="#fff"> contact@csol.dev </TextLink>
+          <TextLink color mode="dark"> contact@csol.dev </TextLink>
         </a>
       </div>
 

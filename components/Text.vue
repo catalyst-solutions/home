@@ -1,7 +1,8 @@
 <template>
   <div
     :lang="lang"
-    class="text-load md:text-6xl text-4xl md:leading-tight leading-tight"
+    class="text-load md:text-7xl text-4xl md:leading-tight leading-tight"
+    :class="[mode == 'light' ? 'text-gray-800' : 'text-gray-200']"
     v-if="size == 'title'"
   >
     <slot />
@@ -9,15 +10,17 @@
 
   <div
     :lang="lang"
-    class="text-load md:text-6xl text-4xl md:leading-tight leading-tight text-neutral-400"
+    class="text-load md:text-7xl text-4xl md:leading-tight leading-tight"
     v-if="size == 'title-gray'"
+    :class="[mode == 'light' ? 'text-neutral-400' : 'text-gray-400']"
   >
     <slot />
   </div>
 
   <div
     :lang="lang"
-    class="text-load md:text-2xl text-xl font-medium md:leading-normal"
+    class="text-load md:text-3xl text-2xl md:leading-normal"
+    :class="[mode == 'light' ? 'text-gray-800' : 'text-gray-200']"
     v-if="size == 'heading'"
   >
     <slot />
@@ -25,7 +28,8 @@
 
   <div
     :lang="lang"
-    class="text-load md:text-xl text font-medium md:leading-loose leading-loose"
+    class="text-load md:text-2xl text md:leading-loose leading-loose"
+    :class="[mode == 'light' ? 'text-gray-800' : 'text-gray-200']"
     v-if="size == 'default'"
   >
     <slot />
@@ -50,6 +54,10 @@ export default {
     size: {
       type: String,
       default: "default",
+    },
+    mode: {
+      type: String,
+      default: "light",
     },
   },
 };

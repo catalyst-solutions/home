@@ -1,6 +1,6 @@
 <template>
   <div class="text-xl font-normal link" :style="css">
-    <NuxtLink :to="to">
+    <NuxtLink style="min-width: 100%" :to="to">
       <slot />
     </NuxtLink>
   </div>
@@ -15,13 +15,18 @@ export default {
   },
   props: {
     to: String,
-    color: {
+
+    mode: {
       type: String,
-      default: "black",
+      default: "light",
     },
   },
   mounted() {
-    this.css = "--text-color: " + this.color;
+    if (this.mode == "light") {
+      this.css = "--text-color: black";
+    } else {
+      this.css = "--text-color: white";
+    }
   },
 };
 </script>
