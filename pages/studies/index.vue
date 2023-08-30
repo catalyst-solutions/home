@@ -44,7 +44,7 @@
           <Loader style="height: 50px; width: 100%"></Loader>
         </div>
       </div>
-      <div v-if="!studies.length" class="flex">
+      <div v-if="!studies.length && !loading" class="flex">
         <div class="text-center m-auto flex flex-col gap-6 w-80 items-center">
           <Text> {{ i18n.t("noStudies") }}</Text>
           <Button
