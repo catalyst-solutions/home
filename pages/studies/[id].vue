@@ -61,7 +61,7 @@
           <Text size="title" v-if="entry.fields.summary">
             {{ entry.fields.summary[$i18n.locale] }}</Text
           >
-          <div v-if="entry.fields.tags" class="flex flex-wrap gap-2">
+          <div v-if="entry.fields.tags" class="flex flex-wrap gap-2 h-max">
             <Badge v-for="i in entry.fields.tags[$i18n.locale].split(',')">
               {{ i }}
             </Badge>
