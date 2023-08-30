@@ -1,23 +1,26 @@
 <template>
   <button
-    class="text-xl bg-white p-8 py-4 text-black hover:outline-black hover:outline-2 outline-1 outline outline-slate-200 hover:outline-black"
+    class="rounded-full text-xl p-8 py-4 outline"
     @click="$emit('click')"
     v-if="type == 'default'"
-  >
-    <slot />
-  </button>
-  <button
-    class="text-xl bg-black p-8 py-4 text-white hover:bg-slate-800"
-    @click="$emit('click')"
-    v-if="type == 'black'"
+    :class="[
+      mode == 'light'
+        ? 'bg-white text-black hover:outline-black'
+        : 'bg-black text-white border-white ',
+    ]"
   >
     <slot />
   </button>
 
   <button
-    class="text-xl bg-lime-300 hover:bg-lime-400 p-8 py-4 text-black"
+    class="rounded-full text-xl p-8 py-4"
     @click="$emit('click')"
     v-if="type == 'primary'"
+    :class="[
+      mode == 'light'
+        ? 'bg-purple-300 hover:bg-purple-400 text-black '
+        : 'bg-purple-300 hover:bg-purple-400 text-black',
+    ]"
   >
     <slot />
   </button>
@@ -29,6 +32,10 @@ export default {
     type: {
       type: String,
       default: "default",
+    },
+    mode: {
+      type: String,
+      default: "light",
     },
   },
 };

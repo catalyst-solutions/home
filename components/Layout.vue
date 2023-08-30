@@ -1,10 +1,12 @@
 <template>
   <div
     class="z-10 relative min-h-screen text-black max-w-screen overflow-x-hidden"
+    :class="[mode == 'light' ? 'bg-white' : 'bg-black']"
   >
     <div class="flex">
       <div
-        class="blur-3xl bg-lime-300 absolute h-60 w-1/3 rounded-full animate__animated animate__fadeIn animate__delay-1s"
+        :class="[mode == 'light' ? 'bg-purple-300' : 'bg-purple-800']"
+        class="blur-3xl absolute h-60 w-1/3 rounded-full animate__animated animate__fadeIn animate__delay-1s"
         style="top: -100px; left: -100px; z-index: -1"
       ></div>
       <div
@@ -17,7 +19,7 @@
       <div class="min-h-screen flex flex-col gap-20 block lg:hidden">
         <slot />
       </div>
-      <Nav />
+      <Nav :mode="mode" />
     </div>
 
     <Footer class="z-50 relative" />
@@ -51,8 +53,15 @@ export default {
       "font-size:30px; "
     );
   },
+  props: {
+    mode: {
+      type: String,
+      default: "light",
+    },
+  },
 };
 </script>
+
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 

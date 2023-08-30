@@ -1,53 +1,65 @@
 <template>
-  <div class="flex flex-col gap-20">
-    <Wrapper>
+  <Layout>
+    <Wrapper class="flex flex-col gap-20">
       <Text size="title"> {{ i18n.t("header") }} </Text>
+
+      <div class="flex flex-col">
+        <input
+          v-model="search"
+          placeholder="Search..."
+          class="bg-transparent border focus:border-black focus:outline-none focus:ring-b focus:ring-black p-6"
+          @change="getStudies()"
+        />
+
+        <div class="grid border-r border-l">
+          <NuxtLink
+            :to="'/studies/' + i.fields.slug.value"
+            v-for="i in studies.data"
+          >
+            <div
+              class="studies-table border-b p-4 flex flex-col md:flex-row md:gap-10 gap-2 md:items-center"
+            >
+              <Text :mode="mode">{{ i.fields.title[$i18n.locale] }}</Text>
+              <div class="relative hidden md:block" style="width: 200px">
+                <img :src="i.fields.header_img.value.asset.source_url" />
+              </div>
+              <div class="md:ml-auto flex flex-wrap gap-2">
+                <Badge
+                  :mode="mode"
+                  v-for="i in i.fields.tags[$i18n.locale]
+                    .split(',')
+                    .slice(0, 3)"
+                  >{{ i }}</Badge
+                >
+              </div>
+            </div>
+          </NuxtLink>
+        </div>
+        <div v-if="loading" class="grid gap-2">
+          <Loader style="height: 50px; width: 100%"></Loader>
+          <Loader style="height: 50px; width: 100%"></Loader>
+          <Loader style="height: 50px; width: 100%"></Loader>
+          <Loader style="height: 50px; width: 100%"></Loader>
+
+          <Loader style="height: 50px; width: 100%"></Loader>
+        </div>
+      </div>
+      <div v-if="!studies.length" class="flex">
+        <div class="text-center m-auto flex flex-col gap-6 w-80 items-center">
+          <Text> {{ i18n.t("noStudies") }}</Text>
+          <Button
+            @click="
+              search = '';
+              getStudies();
+            "
+          >
+            {{ i18n.t("noStudiesButton") }}</Button
+          >
+        </div>
+      </div>
     </Wrapper>
-    <div class="flex flex-col">
-      <input
-        v-model="search"
-        placeholder="Search..."
-        class="bg-transparent border-t border-l border-r focus:border-black focus:outline-none focus:ring-b focus:ring-black p-6"
-        @change="getStudies()"
-      />
-
-      <div class="grid md:grid-cols-2">
-        <Card
-          v-for="i in studies.data"
-          :src="
-            i.fields.header_img.value.asset
-              ? i.fields.header_img.value.asset.source_url
-              : ''
-          "
-          :title="i.fields.title[$i18n.locale]"
-          :info="i.fields.subtitle[$i18n.locale]"
-          :to="'/studies/' + i.fields.slug.value"
-        ></Card>
-      </div>
-      <div v-if="loading" class="grid md:grid-cols-2 gap-2">
-        <Loader style="min-height: 300px; min-width: 100%"></Loader>
-        <Loader style="min-height: 300px; min-width: 100%"></Loader>
-        <Loader style="min-height: 300px; min-width: 100%"></Loader>
-        <Loader style="min-height: 300px; min-width: 100%"></Loader>
-
-        <Loader style="min-height: 300px; min-width: 100%"></Loader>
-      </div>
-    </div>
-    <div v-if="!studies.length" class="flex">
-      <div class="text-center m-auto flex flex-col gap-6 w-80 items-center">
-        <Text> {{ i18n.t("noStudies") }}</Text>
-        <Button
-          @click="
-            search = '';
-            getStudies();
-          "
-        >
-          {{ i18n.t("noStudiesButton") }}</Button
-        >
-      </div>
-    </div>
     <div class="p-10"></div>
-  </div>
+  </Layout>
 </template>
 
 <script setup>

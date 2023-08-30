@@ -1,93 +1,114 @@
 <template>
-  <Wrapper>
-    <!-- header-->
-    <div class="flex flex-col gap-6 pb-6" style="min-height: 80vh">
-      <div class="flex flex-col gap-6">
-        <div class="flex flex-col" style="max-width: 1200px">
-          <Text size="title">
-            {{ i18n.t("header") }}
-          </Text>
-        </div>
-      </div>
-    </div>
-  </Wrapper>
-
-  <div class="grid md:grid-cols-2">
-    <Card
-      v-for="i in studies.data"
-      :src="
-        i.fields.header_img.value.asset
-          ? i.fields.header_img.value.asset.source_url
-          : ''
-      "
-      :title="i.fields.title[$i18n.locale]"
-      :info="i.fields.subtitle[$i18n.locale]"
-      :to="'/studies/' + i.fields.slug.value"
-    >
-    </Card>
-  </div>
-
-  <div v-if="loading" class="grid md:grid-cols-2 gap-2">
-    <Loader style="min-height: 300px; min-width: 100%"></Loader>
-    <Loader style="min-height: 300px; min-width: 100%"></Loader>
-    <Loader style="min-height: 300px; min-width: 100%"></Loader>
-    <Loader style="min-height: 300px; min-width: 100%"></Loader>
-
-    <Loader style="min-height: 300px; min-width: 100%"></Loader>
-  </div>
-
-  <!-- how we work-->
-  <div class="pt-10">
+  <Layout :mode="mode">
     <Wrapper>
-      <Text size="title-gray"> {{ i18n.t("csolWay.heading1") }} </Text>
-      <Text size="title"> {{ i18n.t("csolWay.heading2") }}</Text>
-      <div class="p-10"></div>
-
-      <div class="flex flex-col gap-12">
-        <div
-          class="grid lg:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
-        >
-          <div class="w-1/3">
-            <Badge
-              ><div class="text-2xl">
-                {{ i18n.t("csolWay.steps.step1.title") }}
-              </div>
-            </Badge>
+      <!-- header-->
+      <div class="flex flex-col gap-6 pb-6" style="min-height: 100vh">
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col" style="max-width: 1200px">
+            <Text size="title" :mode="mode">
+              {{ i18n.t("header") }}
+            </Text>
           </div>
-
-          <Text>
-            {{ i18n.t("csolWay.steps.step1.text") }}
-          </Text>
-        </div>
-
-        <div
-          class="grid lg:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
-        >
-          <Badge
-            ><div class="text-2xl">
-              {{ i18n.t("csolWay.steps.step2.title") }}
-            </div>
-          </Badge>
-
-          <Text>
-            {{ i18n.t("csolWay.steps.step2.text") }}
-          </Text>
-        </div>
-
-        <div class="grid lg:grid-cols-2 pb-12 items-center gap-6">
-          <Badge
-            ><div class="text-2xl">
-              {{ i18n.t("csolWay.steps.step3.title") }}
-            </div>
-          </Badge>
-
-          <Text>
-            {{ i18n.t("csolWay.steps.step3.text") }}
-          </Text>
+          <div class="flex gap-4">
+            <NuxtLink to="/contact">
+              <Button :mode="mode" type="primary">{{
+                i18n.t("letsTalk")
+              }}</Button>
+            </NuxtLink>
+            <NuxtLink to="/studies">
+              <Button :mode="mode">{{ i18n.t("priorProjects") }}</Button>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </Wrapper>
-  </div>
+
+    <Wrapper>
+      <div id="darkmode-toggle" class="grid">
+        <NuxtLink
+          :to="'/studies/' + i.fields.slug.value"
+          v-for="i in studies.data"
+        >
+          <div
+            class="studies-table border-b py-4 flex flex-col md:flex-row md:gap-10 gap-2 md:items-center"
+          >
+            <Text :mode="mode">{{ i.fields.title[$i18n.locale] }}</Text>
+            <div class="relative hidden md:block" style="width: 200px">
+              <img :src="i.fields.header_img.value.asset.source_url" />
+            </div>
+            <div class="md:ml-auto flex flex-wrap gap-2">
+              <Badge
+                :mode="mode"
+                v-for="i in i.fields.tags[$i18n.locale].split(',').slice(0, 3)"
+                >{{ i }}</Badge
+              >
+            </div>
+          </div>
+        </NuxtLink>
+      </div>
+      <div v-if="loading" class="grid gap-2">
+        <Loader style="height: 50px; width: 100%"></Loader>
+        <Loader style="height: 50px; width: 100%"></Loader>
+        <Loader style="height: 50px; width: 100%"></Loader>
+        <Loader style="height: 50px; width: 100%"></Loader>
+
+        <Loader style="height: 50px; width: 100%"></Loader>
+      </div>
+
+      <!-- how we work-->
+      <div class="pt-20">
+        <Text :mode="mode" size="title-gray">
+          {{ i18n.t("csolWay.heading1") }}
+        </Text>
+        <Text :mode="mode" size="title"> {{ i18n.t("csolWay.heading2") }}</Text>
+        <div class="p-10"></div>
+
+        <div class="flex flex-col gap-12">
+          <div
+            class="grid lg:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
+          >
+            <div class="w-1/3">
+              <Badge :mode="mode"
+                ><div class="text-2xl">
+                  {{ i18n.t("csolWay.steps.step1.title") }}
+                </div>
+              </Badge>
+            </div>
+
+            <Text :mode="mode">
+              {{ i18n.t("csolWay.steps.step1.text") }}
+            </Text>
+          </div>
+
+          <div
+            class="grid lg:grid-cols-2 border-b border-slate-200 pb-12 items-center gap-6"
+          >
+            <Badge :mode="mode"
+              ><div class="text-2xl">
+                {{ i18n.t("csolWay.steps.step2.title") }}
+              </div>
+            </Badge>
+
+            <Text :mode="mode">
+              {{ i18n.t("csolWay.steps.step2.text") }}
+            </Text>
+          </div>
+
+          <div class="grid lg:grid-cols-2 pb-12 items-center gap-6">
+            <Badge :mode="mode"
+              ><div class="text-2xl">
+                {{ i18n.t("csolWay.steps.step3.title") }}
+              </div>
+            </Badge>
+
+            <Text :mode="mode">
+              {{ i18n.t("csolWay.steps.step3.text") }}
+            </Text>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </Layout>
 </template>
 <script setup>
 import { useI18n } from "#i18n";
@@ -97,6 +118,8 @@ const i18n = useI18n();
 <i18n lang="json">
 {
   "de": {
+    "letsTalk": "Buchen Sie uns",
+    "priorProjects": "Unsere Projekte",
     "header": "Wir sind eine Design Agentur mit Fokus auf der Entwicklung von digitalen Unternehmensauftritten, die Kunden überzeugen",
     "csolWay": {
       "heading1": "Gutes Design ist schwer",
@@ -119,6 +142,8 @@ const i18n = useI18n();
     }
   },
   "en": {
+    "letsTalk": "Let's talk",
+    "priorProjects": "Prior projects",
     "header": "We are a design agency with a focus on developing digital corporate appearances that your clients will love",
 
     "csolWay": {
@@ -151,6 +176,7 @@ export default {
       loading: true,
       client: undefined,
       studies: { data: [] },
+      mode: "dark",
     };
   },
 
@@ -166,8 +192,36 @@ export default {
 
     await this.client.init();
     this.getStudies();
+    this.checkMode();
   },
+  created() {
+    if (process.browser) {
+      window.addEventListener("scroll", this.checkMode);
+    }
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.checkMode);
+  },
+
   methods: {
+    checkMode(_e) {
+      let rect = document
+        .getElementById("darkmode-toggle")
+        .getBoundingClientRect();
+
+      if (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      ) {
+        this.mode = "light";
+      } else {
+        this.mode = "dark";
+      }
+    },
     async getStudies() {
       this.studies = await this.client.entries.list({
         filter: {
@@ -179,3 +233,22 @@ export default {
   },
 };
 </script>
+
+<style>
+.studies-table img {
+  top: -50%;
+  transform: translate(0, -50%);
+  left: 0;
+  position: absolute;
+
+  z-index: 1;
+  width: 200px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.studies-table:hover img {
+  transition: 0.3s ease;
+  opacity: 0.5 !important;
+}
+</style>

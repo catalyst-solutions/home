@@ -1,114 +1,116 @@
 <template>
-  <Wrapper v-if="entry.fields">
-    <div class="flex flex-col gap-28">
-      <div class="text-white flex flex-col gap-20 h-screen">
-        <div
-          style="
-            min-width: 100vw;
-            min-height: 100vh;
-            background-size: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-          "
-          :style="
-            'background-image:url(' +
-            entry.fields.header_img.value.asset.source_url +
-            ')'
-          "
-        ></div>
+  <Layout>
+    <Wrapper v-if="entry.fields">
+      <div class="flex flex-col gap-28">
+        <div class="text-white flex flex-col gap-20 h-screen">
+          <div
+            style="
+              min-width: 100vw;
+              min-height: 100vh;
+              background-size: cover;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+            "
+            :style="
+              'background-image:url(' +
+              entry.fields.header_img.value.asset.source_url +
+              ')'
+            "
+          ></div>
 
-        <TextLink to="/studies" mode="dark">
-          <div class="flex items-center gap-2">
-            <Icon icon="arrow_back" />
-            {{ i18n.t("caseStudies") }}
-          </div>
-        </TextLink>
-        <div class="flex flex-col">
-          <Text v-if="entry.fields.title" size="title" mode="dark">
-            <span class="animate__animated animate__fadeInDown">
-              {{ entry.fields.title[$i18n.locale] }}
-            </span>
-          </Text>
-          <Text v-if="entry.fields.subtitle" size="title-gray" mode="dark">
-            <span
-              class="animate__animated animate__fadeInDown animate__delay-1s"
-            >
-              {{ entry.fields.subtitle[$i18n.locale] }}
-            </span>
-          </Text>
-        </div>
-        <div class="flex grid md:grid-cols-2 mt-auto mb-20 gap-10">
+          <TextLink to="/studies" mode="dark">
+            <div class="flex items-center gap-2">
+              <Icon icon="arrow_back" />
+              {{ i18n.t("caseStudies") }}
+            </div>
+          </TextLink>
           <div class="flex flex-col">
-            <Text mode="dark" size="heading"> {{ i18n.t("writenBy") }}</Text>
-            <Text mode="dark" v-if="entry.fields.written_by">
-              {{ entry.fields.written_by[$i18n.locale] }}</Text
-            >
+            <Text v-if="entry.fields.title" size="title" mode="dark">
+              <span class="animate__animated animate__fadeInDown">
+                {{ entry.fields.title[$i18n.locale] }}
+              </span>
+            </Text>
+            <Text v-if="entry.fields.subtitle" size="title-gray" mode="dark">
+              <span
+                class="animate__animated animate__fadeInDown animate__delay-1s"
+              >
+                {{ entry.fields.subtitle[$i18n.locale] }}
+              </span>
+            </Text>
           </div>
+          <div class="flex grid md:grid-cols-2 mt-auto mb-20 gap-10">
+            <div class="flex flex-col">
+              <Text mode="dark" size="heading"> {{ i18n.t("writtenBy") }}</Text>
+              <Text mode="dark" v-if="entry.fields.written_by">
+                {{ entry.fields.written_by[$i18n.locale] }}</Text
+              >
+            </div>
 
-          <div class="flex flex-col">
-            <Text mode="dark" size="heading"> {{ i18n.t("published") }}</Text>
-            <Text mode="dark" v-if="entry.fields.published_at">
-              {{ entry.fields.published_at[$i18n.locale] }}</Text
-            >
-          </div>
-        </div>
-      </div>
-
-      <div class="flex grid xl:grid-cols-2 gap-10">
-        <Text size="title" v-if="entry.fields.summary">
-          {{ entry.fields.summary[$i18n.locale] }}</Text
-        >
-        <div v-if="entry.fields.tags" class="flex flex-wrap gap-2">
-          <Badge v-for="i in entry.fields.tags[$i18n.locale].split(',')">
-            {{ i }}
-          </Badge>
-        </div>
-      </div>
-
-      <div
-        v-if="entry.fields.sections"
-        v-for="i in entry.fields.sections.entries"
-        class="grid xl:grid-cols-2 gap-10"
-      >
-        <div
-          v-if="
-            i.entry.fields.image.value &&
-            images[i.entry.fields.image.value.asset] &&
-            images[i.entry.fields.image.value.asset].source_url
-          "
-        ></div>
-
-        <div
-          class="flex flex-col gap-6 pb-20"
-          v-if="i.entry.fields.text[$i18n.locale]"
-        >
-          <div v-if="i.entry.fields.image.value">
-            <div style="display: none">
-              {{ getImage(i.entry.fields.image.value.asset) }}
+            <div class="flex flex-col">
+              <Text mode="dark" size="heading"> {{ i18n.t("published") }}</Text>
+              <Text mode="dark" v-if="entry.fields.published_at">
+                {{ entry.fields.published_at[$i18n.locale] }}</Text
+              >
             </div>
           </div>
-          <Text size="heading">
-            {{ i.entry.fields.title[$i18n.locale] }}
-          </Text>
-          <Text>
-            <div v-html="i.entry.fields.text[$i18n.locale]"></div>
-          </Text>
         </div>
 
-        <Image
-          v-if="
-            i.entry.fields.image.value &&
-            images[i.entry.fields.image.value.asset] &&
-            images[i.entry.fields.image.value.asset].source_url
-          "
-          :src="images[i.entry.fields.image.value.asset].source_url"
-        ></Image>
+        <div class="flex grid xl:grid-cols-2 gap-10">
+          <Text size="title" v-if="entry.fields.summary">
+            {{ entry.fields.summary[$i18n.locale] }}</Text
+          >
+          <div v-if="entry.fields.tags" class="flex flex-wrap gap-2">
+            <Badge v-for="i in entry.fields.tags[$i18n.locale].split(',')">
+              {{ i }}
+            </Badge>
+          </div>
+        </div>
+
+        <div
+          v-if="entry.fields.sections"
+          v-for="i in entry.fields.sections.entries"
+          class="grid xl:grid-cols-2 gap-10"
+        >
+          <div
+            v-if="
+              i.entry.fields.image.value &&
+              images[i.entry.fields.image.value.asset] &&
+              images[i.entry.fields.image.value.asset].source_url
+            "
+          ></div>
+
+          <div
+            class="flex flex-col gap-6 pb-20"
+            v-if="i.entry.fields.text[$i18n.locale]"
+          >
+            <div v-if="i.entry.fields.image.value">
+              <div style="display: none">
+                {{ getImage(i.entry.fields.image.value.asset) }}
+              </div>
+            </div>
+            <Text size="heading">
+              {{ i.entry.fields.title[$i18n.locale] }}
+            </Text>
+            <Text>
+              <div v-html="i.entry.fields.text[$i18n.locale]"></div>
+            </Text>
+          </div>
+
+          <Image
+            v-if="
+              i.entry.fields.image.value &&
+              images[i.entry.fields.image.value.asset] &&
+              images[i.entry.fields.image.value.asset].source_url
+            "
+            :src="images[i.entry.fields.image.value.asset].source_url"
+          ></Image>
+        </div>
       </div>
-    </div>
-    <div class="p-10"></div>
-  </Wrapper>
+      <div class="p-10"></div>
+    </Wrapper>
+  </Layout>
 </template>
 
 <script>
@@ -161,12 +163,12 @@ const i18n = useI18n();
 {
   "en": {
     "caseStudies": "Case studies",
-    "writenBy": "Writen by",
+    "writtenBy": "Written by",
     "published": "Published on"
   },
   "de": {
     "caseStudies": "Fallstudien",
-    "writenBy": "Geschrieben von",
+    "writtenBy": "Geschrieben von",
     "published": "Veröffentlicht am"
   }
 }
