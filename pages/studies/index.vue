@@ -122,7 +122,7 @@ export default {
     "noStudiesButton": "Reset Search"
   },
   "de": {
-    "header": "Lesen sie über unsere Projekte",
+    "header": "Lesen Sie über unsere Projekte",
     "noStudies": "Keine Fallstudien gefunden. Versuchen Sie es nochmal",
     "noStudiesButton": "Suche zurücksetzen"
   }
