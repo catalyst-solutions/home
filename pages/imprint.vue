@@ -7,7 +7,7 @@
 
         <Text class="w-2/3">
           Impressum Angaben gemäß § 5 TMG<br /><br />
-          Joshua Koeck<br />
+          Cofie Noah & Joshua Köck GbR<br />
           Muenchstraße 12<br />
           63739 Aschaffenburg<br /><br />
           Vertreten durch:<br />
