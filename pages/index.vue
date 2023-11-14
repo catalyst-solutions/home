@@ -252,3 +252,13 @@ export default {
   opacity: 0.5 !important;
 }
 </style>
+
+<!-- Start of HubSpot Embed Code -->
+<script
+  type="text/javascript"
+  id="hs-script-loader"
+  async
+  defer
+  src="//js-eu1.hs-scripts.com/143365405.js"
+></script>
+<!-- End of HubSpot Embed Code -->
