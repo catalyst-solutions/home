@@ -1,11 +1,11 @@
 <template>
   <button
-    class="rounded-full text-xl p-8 py-4 outline"
+    class="rounded-full text-xl p-8 py-4 border"
     @click="$emit('click')"
     v-if="type == 'default'"
     :class="[
       mode == 'light'
-        ? 'bg-white text-black hover:outline-black'
+        ? 'bg-white text-black hover:border-black'
         : 'bg-black text-white border-white ',
     ]"
   >

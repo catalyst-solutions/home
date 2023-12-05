@@ -10,6 +10,7 @@
         class="flex flex-col md:flex-row gap-12 items-center text-center text-white mt-auto pb-6"
       >
         <TextLink mode="dark" to="/"> Home </TextLink>
+
         <TextLink mode="dark" to="/studies">
           {{ i18n.t("studies") }}
         </TextLink>

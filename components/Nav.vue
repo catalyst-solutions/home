@@ -16,6 +16,13 @@
         {{ i18n.t("home") }}
       </NuxtLink>
       <NuxtLink
+        to="/products"
+        class="text-2xl text-load"
+        :class="[$route.name.includes('products') ? '' : 'text-gray-400']"
+      >
+        {{ i18n.t("products") }}
+      </NuxtLink>
+      <NuxtLink
         to="/studies"
         class="text-2xl text-load"
         :class="[$route.name.includes('studies') ? '' : 'text-gray-400']"
@@ -62,6 +69,7 @@
       </template>
       <Wrapper class="flex flex-col gap-6 items-center">
         <TextLink to="/"> {{ i18n.t("home") }} </TextLink>
+        <TextLink to="/products"> {{ i18n.t("products") }}</TextLink>
         <TextLink to="/studies"> {{ i18n.t("studies") }}</TextLink>
         <TextLink to="/contact"> {{ i18n.t("contact") }} </TextLink>
         <select
@@ -94,11 +102,13 @@ export default {
 {
   "en": {
     "home": "Home",
+    "products": "Products",
     "studies": "Case studies",
     "contact": "Contact"
   },
   "de": {
     "home": "Home",
+    "products": "Produkte",
     "studies": "Fallstudien",
     "contact": "Kontakt"
   }
