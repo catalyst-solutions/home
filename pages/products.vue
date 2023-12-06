@@ -132,12 +132,12 @@ export default {
   "en": {
     "heading": "What we have to offer:",
     "inquire": "Let's talk",
-    "demo": "View demo"
+    "demo": "Demo"
   },
   "de": {
     "heading": "Wir können...",
     "inquire": "Anfrage stellen",
-    "demo": "Interaktive Demo"
+    "demo": "Demo"
   }
 }
 </i18n>
