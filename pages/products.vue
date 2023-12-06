@@ -130,13 +130,13 @@ export default {
 <i18n lang="json">
 {
   "en": {
-    "heading": "What we have to offer:",
+    "heading": "Products",
     "inquire": "Let's talk",
     "demo": "Demo"
   },
   "de": {
-    "heading": "Wir können...",
-    "inquire": "Anfrage stellen",
+    "heading": "Produkte",
+    "inquire": "Anfragen",
     "demo": "Demo"
   }
 }
