@@ -54,15 +54,15 @@ const i18n = useI18n();
 <i18n lang="json">
 {
   "de": {
-    "header": "Schreiben Sie uns",
+    "header": "Kontakt",
     "text1": "Schreiben Sie uns",
     "text2": "Sprechen Sie mit uns",
     "questionnaire": "Via Fragebogen"
   },
   "en": {
-    "header": "Let's talk",
+    "header": "Contact",
     "text1": "Write us",
-    "text2": "Talk with us",
+    "text2": "Let's talk",
     "questionnaire": "Via Questionnaire"
   }
 }
