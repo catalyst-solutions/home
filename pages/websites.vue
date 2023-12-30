@@ -23,10 +23,7 @@
           </Text>
 
           <div class="mt-auto"></div>
-          <div class="flex flex-wrap gap-4">
-            <NuxtLink v-if="i.demo" :to="i.demo">
-              <Button> {{ i18n.t("demo") }} </Button>
-            </NuxtLink>
+          <div class="flex items-center justify-center mb-10">
             <NuxtLink to="/contact">
               <Button type="primary">
                 {{ i18n.t("inquire") }}
@@ -59,10 +56,10 @@ export default {
               "Geringe Ladezeiten",
               "Responsive Design (Darstellung für alle Geräte optimiert)",
               "Interaktives Kontaktformular",
-
               "DSGVO-konform",
+              "...",
             ],
-            demo: "#",
+            inquire: "csol.dev/contact",
           },
 
           {
@@ -71,12 +68,12 @@ export default {
             bulletpoints: [
               "Layout- und Seitenkonzept nach Anforderungsanalyse",
               "Zielgruppenorientierte Markenkommunikation",
-              "Support-Automation (über Chatbots)",
               "Online-Terminvereinbarung",
+              "Automatisierte Supportrückmeldungen",
 
               "...",
             ],
-            demo: "#",
+            inquire: "#",
           },
 
           {
@@ -90,6 +87,7 @@ export default {
               "Digitales Bestandsmanagement",
               "...",
             ],
+            inquire: "#",
           },
         ],
 
@@ -102,7 +100,7 @@ export default {
               "Integration of interactive elements and images for each dish",
               "Customers can see your food for themselves in advance",
             ],
-            demo: "#",
+            inquire: "#",
           },
 
           {
@@ -113,7 +111,7 @@ export default {
               "Confirmation and reminder messages reduce appointment cancellations",
               "Better overview and coordination of work processes",
             ],
-            demo: "#",
+            inquire: "#",
           },
 
           {
@@ -126,6 +124,7 @@ export default {
               "IT security concepts (automatic backups, malewarescans, attack prevention etc.)",
               "and so much more...",
             ],
+            inquire: "#",
           },
         ],
       },
@@ -143,7 +142,7 @@ export default {
   },
   "de": {
     "heading": "Webseiten",
-    "inquire": "Anfragen",
+    "inquire": "Unverbindliches Erstgespräch",
     "demo": "Demo"
   }
 }
