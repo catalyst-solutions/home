@@ -26,7 +26,7 @@
           <div class="flex items-center justify-center mb-10">
             <NuxtLink to="/contact">
               <Button type="primary">
-                {{ i18n.t("inquire") }}
+                {{ isMobile ? i18n.t("inquireShort") : i18n.t("inquire") }}
               </Button>
             </NuxtLink>
           </div>
@@ -40,6 +40,10 @@
 <script setup>
 import { useI18n } from "#i18n";
 const i18n = useI18n();
+const isIPhone =
+  process.client &&
+  /iPhone/.test(navigator.userAgent) &&
+  window.innerWidth <= 440;
 </script>
 
 <script>
@@ -69,8 +73,7 @@ export default {
               "Layout- und Seitenkonzept nach Anforderungsanalyse",
               "Zielgruppenorientierte Markenkommunikation",
               "Online-Terminvereinbarung",
-              "Automatisierte Supportrückmeldungen",
-
+              "Automatisierter Supportdialog",
               "...",
             ],
             inquire: "#",
@@ -143,6 +146,7 @@ export default {
   "de": {
     "heading": "Webseiten",
     "inquire": "Kostenfreies Erstgespräch",
+    "inquireShort": "Erstgespräch",
     "demo": "Demo"
   }
 }
