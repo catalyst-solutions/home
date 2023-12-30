@@ -50,15 +50,14 @@ export default {
       websites: {
         de: [
           {
-            title: "Solo Buisness",
+            title: "Buisness Solo",
             description: "für Einzelunternehmen",
             bulletpoints: [
               "≤ 3 Unterseiten inklusive",
-              "Geringe Ladezeiten",
-              "Responsive Design (Darstellung für alle Geräte optimiert)",
+              "Schnelle Ladezeiten",
+              "Responsive Design",
               "Interaktives Kontaktformular",
               "DSGVO-konform",
-              "...",
             ],
             inquire: "csol.dev/contact",
           },
@@ -69,9 +68,7 @@ export default {
             bulletpoints: [
               "Layout- und Seitenkonzept nach Anforderungsanalyse",
               "Zielgruppenorientierte Markenkommunikation",
-              "Online-Terminvereinbarung",
-              "Automatisierter Supportdialog",
-              "...",
+              "Online-Terminvereinbarung für Zeitersparnis in der Arbeitsorganisation",
             ],
             inquire: "#",
           },
@@ -80,12 +77,10 @@ export default {
             title: "eCommerce",
             description: "zum Onlinehandel",
             bulletpoints: [
-              "Plug-and-Play",
-              "Conversionstarkes Shop-Interface",
-              "Warenkorb-Management",
-              "Zahlungsgateways (u.a. Paypal, Klarna & SEPA)",
+              "Google Cloud Infrastruktur für maximale Skalierbarkeit",
+              "Conversionsstarke Shop-Oberfläche",
+              "Zahlungsgateways (z.B. Paypal, Klarna & SEPA)",
               "Digitales Bestandsmanagement",
-              "...",
             ],
             inquire: "#",
           },
