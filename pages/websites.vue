@@ -22,8 +22,10 @@
             </ul>
           </Text>
 
+          <div class="grid grid-cols-1 xl:grid-cols-3 gap-10"></div>
+
           <div class="mt-auto"></div>
-          <div class="flex items-center justify-left my-0 mb-5">
+          <div class="flex items-center justify-center mb-14">
             <NuxtLink to="/contact">
               <Button type="primary">
                 {{ isMobile ? i18n.t("inquireShort") : i18n.t("inquire") }}
