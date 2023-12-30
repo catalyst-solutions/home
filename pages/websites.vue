@@ -69,10 +69,11 @@ export default {
             title: "Corporate",
             description: "für Betriebe & Unternehmen",
             bulletpoints: [
-              "Strategische Markenkommunikation",
-              "Layout- und Seitengestaltung nach individuellen Anforderungen",
+              "Layout- und Seitenkonzept nach Anforderungsanalyse",
+              "Zielgruppenorientierte Markenkommunikation",
               "Support-Automation (über Chatbots)",
               "Online-Terminvereinbarung",
+
               "...",
             ],
             demo: "#",
@@ -86,7 +87,7 @@ export default {
               "Conversionstarkes Shop-Interface",
               "Warenkorb-Management",
               "Zahlungsgateways (u.a. Paypal, Klarna & SEPA)",
-              "Effizientes Bestandsmanagement",
+              "Digitales Bestandsmanagement",
               "...",
             ],
           },
