@@ -52,7 +52,7 @@ export default {
       websites: {
         de: [
           {
-            title: "Solo",
+            title: "Solo Buisness",
             description: "für Einzelunternehmen",
             bulletpoints: [
               "Für Mobilgeräte optimiert",
