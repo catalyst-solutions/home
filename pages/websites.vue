@@ -55,9 +55,9 @@ export default {
             title: "Solo Buisness",
             description: "für Einzelunternehmen",
             bulletpoints: [
-              "Darstellung für alle Geräte optimiert",
-              "Schnelle Ladezeiten",
-              "Unterseiten Profil, Referenzen & Kontakt",
+              "≤ 3 Unterseiten inklusive",
+              "Geringe Ladezeiten",
+              "Responsive Design (Darstellung für alle Geräte optimiert)",
               "Interaktives Kontaktformular",
 
               "DSGVO-konform",
@@ -69,10 +69,10 @@ export default {
             title: "Corporate",
             description: "für Betriebe & Unternehmen",
             bulletpoints: [
-              "Strategisches Branding",
-              "Individuelle Seiten- und Layoutgestaltung",
+              "Strategische Markenkommunikation",
+              "Layout- und Seitengestaltung nach individuellen Anforderungen",
+              "Support-Automation (über Chatbots)",
               "Online-Terminvereinbarung",
-              "Support-Automation über Chatbots",
               "...",
             ],
             demo: "#",
@@ -80,11 +80,11 @@ export default {
 
           {
             title: "eCommerce",
-            description: "für den Onlinehandel",
+            description: "zum Onlinehandel",
             bulletpoints: [
               "Conversionstarkes Shop-Interface",
               "Warenkorb-Management",
-              "Zahlungsgateways (z.B. Paypal & SEPA)",
+              "Zahlungsgateways (u.a. Paypal, Klarna & SEPA)",
               "Effizientes Bestandsmanagement",
               "...",
             ],
