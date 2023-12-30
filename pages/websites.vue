@@ -23,7 +23,7 @@
           </Text>
 
           <div class="mt-auto"></div>
-          <div class="flex items-center justify-center mb-10">
+          <div class="flex items-center justify-left my-0 mb-5">
             <NuxtLink to="/contact">
               <Button type="primary">
                 {{ isMobile ? i18n.t("inquireShort") : i18n.t("inquire") }}
