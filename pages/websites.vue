@@ -82,6 +82,7 @@ export default {
             title: "eCommerce",
             description: "zum Onlinehandel",
             bulletpoints: [
+              "Plug-and-Play",
               "Conversionstarkes Shop-Interface",
               "Warenkorb-Management",
               "Zahlungsgateways (u.a. Paypal, Klarna & SEPA)",
