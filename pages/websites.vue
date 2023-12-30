@@ -22,10 +22,8 @@
             </ul>
           </Text>
 
-          <div class="grid grid-cols-1 xl:grid-cols-3 gap-10"></div>
-
           <div class="mt-auto"></div>
-          <div class="flex items-center justify-center mb-14">
+          <div class="flex items-center justify-center mb-4">
             <NuxtLink to="/contact">
               <Button type="primary">
                 {{ isMobile ? i18n.t("inquireShort") : i18n.t("inquire") }}
@@ -77,7 +75,7 @@ export default {
 
           {
             title: "eCommerce",
-            description: "zum Onlinehandel",
+            description: "für den Onlinehandel",
             bulletpoints: [
               "Google Cloud Infrastruktur für maximale Skalierbarkeit",
               "Conversionsstarke Shop-Oberfläche",
@@ -139,8 +137,8 @@ export default {
   },
   "de": {
     "heading": "Webseiten",
-    "inquire": "Kostenfreies Erstgespräch",
-    "inquireShort": "Erstgespräch",
+    "inquire": "→  Kostenfreies Erstgespräch",
+    "inquireShort": "→  Erstgespräch",
     "demo": "Demo"
   }
 }
