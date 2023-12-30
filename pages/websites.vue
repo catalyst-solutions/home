@@ -142,7 +142,7 @@ export default {
   },
   "de": {
     "heading": "Webseiten",
-    "inquire": "Unverbindliches Erstgespräch",
+    "inquire": "Kostenfreies Erstgespräch",
     "demo": "Demo"
   }
 }
