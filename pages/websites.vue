@@ -26,7 +26,7 @@
           <div class="flex items-center justify-center mb-10">
             <NuxtLink to="/contact">
               <Button type="primary">
-                {{ isIPhone ? i18n.t("inquireShort") : i18n.t("inquire") }}
+                {{ isMobile ? i18n.t("inquireShort") : i18n.t("inquire") }}
               </Button>
             </NuxtLink>
           </div>
@@ -40,10 +40,7 @@
 <script setup>
 import { useI18n } from "#i18n";
 const i18n = useI18n();
-const isIPhone =
-  process.client &&
-  /iPhone/.test(navigator.userAgent) &&
-  window.innerWidth <= 640;
+const isMobile = process.client && window.innerWidth <= 640; // Breakpoint
 </script>
 
 <script>
