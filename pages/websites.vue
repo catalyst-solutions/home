@@ -9,7 +9,7 @@
         <div
           class="border border-gray-300 p-4 rounded flex flex-col gap-6"
           v-if="i18n.locale"
-          v-for="i in products[$i18n.locale]"
+          v-for="i in websites[$i18n.locale]"
         >
           <div class="flex flex-col gap-2">
             <Text size="heading">{{ i.title }}</Text>
@@ -49,39 +49,43 @@ const i18n = useI18n();
 export default {
   data() {
     return {
-      products: {
+      websites: {
         de: [
           {
-            title: "Speisekarte",
-            description: "für Cafés & Restaurants",
+            title: "Solo",
+            description: "für Einzelunternehmen",
             bulletpoints: [
-              "Einfache Integration von zeitlich begrenzten Angeboten und Aktionen",
-              "Einbindung von interaktiven Elementen und Bildern für jedes Gericht",
-              "Kunden können sich vorab von Ihren Speisen überzeugen",
+              "Für Mobilgeräte optimiert",
+              "Profil",
+              "Referenzen",
+              "Kontaktformular",
+              "DSGVO-Konformität",
             ],
             demo: "#",
           },
 
           {
-            title: "Terminbuchung",
-            description: "Terminbuchung für Unternehmen",
+            title: "Corporate",
+            description: "für Betriebe & Unternehmen",
             bulletpoints: [
-              "Kunden können Termine unabhängig von den Geschäftszeiten bequem online buchen",
-              "Bestätigungs- und Erinnerungsnachrichten reduzieren Terminausfälle",
-              "Bessere Übersicht und Koordination der Arbeitsabläufe",
+              "Strategische Identitätsbildung",
+              "Individuelle Seiten- und Layoutgestaltung",
+              "Digitale Terminvereinbarung",
+              "Online-Support Automation mittels KI-Chatbot",
+              "...",
             ],
             demo: "#",
           },
 
           {
-            title: "Maßgeschneidere Entwicklung",
-            description: "- the sky's the limit",
+            title: "eCommerce",
+            description: "für den Onlinehandel",
             bulletpoints: [
-              "Responsive Design",
-              "SEO-Optimierung",
-              "Nutzerfreundliche interne Backend (für einfache Selbstverwaltung von beispielsweise Waaren)",
-              "IT-Sicherheitskonzept (automatisierte Backups, Malwarescans etc.)",
-              "Und vieles mehr...",
+              "Conversionstarkes Shop-Interface",
+              "Warenkorb-Management",
+              "Zahlungsgateways (z.B. Paypal & SEPA)",
+              "Effizientes Bestandsmanagement",
+              "...",
             ],
           },
         ],
@@ -130,12 +134,12 @@ export default {
 <i18n lang="json">
 {
   "en": {
-    "heading": "Products",
+    "heading": "Websites",
     "inquire": "Let's talk",
     "demo": "Demo"
   },
   "de": {
-    "heading": "Produkte",
+    "heading": "Webseiten",
     "inquire": "Anfragen",
     "demo": "Demo"
   }
