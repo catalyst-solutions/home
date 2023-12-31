@@ -53,7 +53,7 @@ export default {
             title: "Buisness Solo",
             description: "für Einzelunternehmen",
             bulletpoints: [
-              "bis zu 3 Unterseiten inklusive",
+              "bis zu 3 Unterseiten",
               "Schnelle Ladezeiten",
               "Responsive Design",
               "Interaktives Kontaktformular",
