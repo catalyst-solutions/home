@@ -137,7 +137,7 @@ export default {
   },
   "de": {
     "heading": "Webseiten",
-    "inquire": "→  Erstgespräch",
+    "inquire": "→  Kostenfreies Erstgespräch",
     "inquireShort": "→  Erstgespräch",
     "demo": "Demo"
   }
