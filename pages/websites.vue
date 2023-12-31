@@ -80,7 +80,7 @@ export default {
               "Google Cloud Infrastruktur für maximale Skalierbarkeit",
               "Conversionsstarke Shop-Oberfläche",
               "Zahlungsgateways (z.B. Paypal, Klarna & SEPA)",
-              "Digitales Inventur",
+              "Digitale Inventur",
             ],
             inquire: "#",
           },
