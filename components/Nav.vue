@@ -15,13 +15,7 @@
       >
         {{ i18n.t("home") }}
       </NuxtLink>
-      <NuxtLink
-        to="/websites"
-        class="text-2xl text-load"
-        :class="[$route.name.includes('websites') ? '' : 'text-gray-400']"
-      >
-        {{ i18n.t("websites") }}
-      </NuxtLink>
+
       <NuxtLink
         to="/studies"
         class="text-2xl text-load"
@@ -29,6 +23,15 @@
       >
         {{ i18n.t("studies") }}
       </NuxtLink>
+
+      <NuxtLink
+        to="/websites"
+        class="text-2xl text-load"
+        :class="[$route.name.includes('websites') ? '' : 'text-gray-400']"
+      >
+        {{ i18n.t("websites") }}
+      </NuxtLink>
+
       <NuxtLink
         to="/contact"
         class="text-2xl text-load"
