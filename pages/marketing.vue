@@ -50,8 +50,8 @@ export default {
       marketing: {
         de: [
           {
-            title: "Branding",
-            description: "Unternehmensidentität",
+            title: "Corporate Identity",
+            description: "Branding",
             bulletpoints: [
               "Schnelle Ladezeiten",
               "Responsive Design",
@@ -63,8 +63,8 @@ export default {
           },
 
           {
-            title: "SEO",
-            description: "Suchmaschinenoptimierung",
+            title: "Suchmaschinenoptimierung",
+            description: "SEO",
             bulletpoints: [
               "Layout- und Seitenkonzept nach Anforderungsanalyse",
               "Zielgruppenorientierte Markenkommunikation",
@@ -74,8 +74,8 @@ export default {
           },
 
           {
-            title: "SEA",
-            description: "Werbekampagnen",
+            title: "Werbekampagnen",
+            description: "SEA",
             bulletpoints: [
               "Google Cloud Infrastruktur für maximale Skalierbarkeit",
               "Conversionsstarke Shop-Oberfläche",
@@ -131,12 +131,12 @@ export default {
 <i18n lang="json">
 {
   "en": {
-    "headingMarketing": "Marketing",
+    "heading": "Marketing",
     "inquire": "Let's talk",
     "demo": "Demo"
   },
   "de": {
-    "headingMarketing": "Marketing",
+    "heading": "Marketing",
     "inquire": "→  Kostenfreies Erstgespräch",
     "inquireShort": "→  Erstgespräch",
     "demo": "Demo"

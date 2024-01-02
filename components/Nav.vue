@@ -113,14 +113,16 @@ export default {
 {
   "en": {
     "home": "Home",
-    "websites": "Websites",
     "studies": "Case studies",
+    "websites": "Websites",
+    "marketing": "Marketing",
     "contact": "Contact"
   },
   "de": {
     "home": "Home",
-    "websites": "Webseiten",
     "studies": "Fallstudien",
+    "websites": "Webseiten",
+    "marketing": "Marketing",
     "contact": "Kontakt"
   }
 }
