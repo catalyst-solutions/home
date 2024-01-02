@@ -33,6 +33,14 @@
       </NuxtLink>
 
       <NuxtLink
+        to="/marketing"
+        class="text-2xl text-load"
+        :class="[$route.name.includes('marketing') ? '' : 'text-gray-400']"
+      >
+        {{ i18n.t("marketing") }}
+      </NuxtLink>
+
+      <NuxtLink
         to="/contact"
         class="text-2xl text-load"
         :class="[$route.name == 'contact' ? '' : 'text-gray-400']"
