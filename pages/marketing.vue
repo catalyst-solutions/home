@@ -50,8 +50,8 @@ export default {
       marketing: {
         de: [
           {
-            title: "Buisness Solo",
-            description: "für Einzelunternehmen",
+            title: "Branding",
+            description: "Unternehmensidentität",
             bulletpoints: [
               "Schnelle Ladezeiten",
               "Responsive Design",
@@ -63,8 +63,8 @@ export default {
           },
 
           {
-            title: "Corporate",
-            description: "für Betriebe & Unternehmen",
+            title: "SEO",
+            description: "Suchmaschinenoptimierung",
             bulletpoints: [
               "Layout- und Seitenkonzept nach Anforderungsanalyse",
               "Zielgruppenorientierte Markenkommunikation",
@@ -74,8 +74,8 @@ export default {
           },
 
           {
-            title: "eCommerce",
-            description: "für den Onlinehandel",
+            title: "SEA",
+            description: "Werbekampagnen",
             bulletpoints: [
               "Google Cloud Infrastruktur für maximale Skalierbarkeit",
               "Conversionsstarke Shop-Oberfläche",
