@@ -51,7 +51,7 @@ export default {
         de: [
           {
             title: "Branding",
-            description: "Unternehmensidentität mit Strategie.",
+            description: "Identität mit Strategie.",
             bulletpoints: [
               "Entwicklung einer starken Markenidentität",
               "Markenrichtlinien für visuelle Kohärenz",
