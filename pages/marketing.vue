@@ -131,12 +131,12 @@ export default {
 <i18n lang="json">
 {
   "en": {
-    "heading": "Marketing",
+    "headingMarketing": "Marketing",
     "inquire": "Let's talk",
     "demo": "Demo"
   },
   "de": {
-    "heading": "Marketing",
+    "headingMarketing": "Marketing",
     "inquire": "→  Kostenfreies Erstgespräch",
     "inquireShort": "→  Erstgespräch",
     "demo": "Demo"
