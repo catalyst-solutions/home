@@ -50,75 +50,46 @@ export default {
       marketing: {
         de: [
           {
-            title: "Corporate Identity",
-            description: "Branding",
-            bulletpoints: [
-              "Schnelle Ladezeiten",
-              "Responsive Design",
-              "Bis zu 3 Unterseiten",
-              "Interaktives Kontaktformular",
-              "DSGVO-konform",
-            ],
+            title: "Branding",
+            description: "Strategische Identitätsbildung",
+            bulletpoints: ["..."],
             inquire: "csol.dev/contact",
           },
 
           {
-            title: "Suchmaschinenoptimierung",
-            description: "SEO",
-            bulletpoints: [
-              "Layout- und Seitenkonzept nach Anforderungsanalyse",
-              "Zielgruppenorientierte Markenkommunikation",
-              "Online-Terminvereinbarung für Zeitersparnis in der Arbeitsorganisation",
-            ],
+            title: "SEO",
+            description: "Optimierte Online-Sichtbarkeit",
+            bulletpoints: ["..."],
             inquire: "#",
           },
 
           {
-            title: "Werbekampagnen",
-            description: "SEA",
-            bulletpoints: [
-              "Google Cloud Infrastruktur für maximale Skalierbarkeit",
-              "Conversionsstarke Shop-Oberfläche",
-              "Zahlungsgateways (z.B. Paypal, Klarna & SEPA)",
-              "Digitale Inventur",
-            ],
+            title: "Kampagnen",
+            description: "Reichweite maximieren",
+            bulletpoints: ["..."],
             inquire: "#",
           },
         ],
 
         en: [
           {
-            title: "Restaurant Menu",
-            description: "perfect for coffee shops & restaurants",
-            bulletpoints: [
-              "Easy integration of time-limited offers and promotions",
-              "Integration of interactive elements and images for each dish",
-              "Customers can see your food for themselves in advance",
-            ],
+            title: "Branding",
+            description: "Corporate identity strategy",
+            bulletpoints: ["..."],
+            inquire: "csol.dev/contact",
+          },
+
+          {
+            title: "SEO",
+            description: "Boost online visibility",
+            bulletpoints: ["..."],
             inquire: "#",
           },
 
           {
-            title: "Appointment booking",
-            description: "Appointment booking for companies",
-            bulletpoints: [
-              "Customers can easily book appointments online, regardless of business hours",
-              "Confirmation and reminder messages reduce appointment cancellations",
-              "Better overview and coordination of work processes",
-            ],
-            inquire: "#",
-          },
-
-          {
-            title: "Custom development",
-            description: "- the sky's the limit",
-            bulletpoints: [
-              "Responsive design",
-              "SEO-Optimization",
-              "User-friendly internal backends (for simple inventory management for instance)",
-              "IT security concepts (automatic backups, malewarescans, attack prevention etc.)",
-              "and so much more...",
-            ],
+            title: "Campaigns",
+            description: "Get high-quality leads",
+            bulletpoints: ["..."],
             inquire: "#",
           },
         ],

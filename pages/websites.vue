@@ -88,36 +88,37 @@ export default {
 
         en: [
           {
-            title: "Restaurant Menu",
-            description: "perfect for coffee shops & restaurants",
+            title: "Business Solo",
+            description: "for sole proprietors",
             bulletpoints: [
-              "Easy integration of time-limited offers and promotions",
-              "Integration of interactive elements and images for each dish",
-              "Customers can see your food for themselves in advance",
+              "Fast Loading Times",
+              "Responsive Design",
+              "Up to 3 Subpages",
+              "Interactive Contact Form",
+              "DSGVO Compliant",
+            ],
+            inquire: "csol.dev/contact",
+          },
+
+          {
+            title: "Corporate",
+            description: "for businesses & enterprises",
+            bulletpoints: [
+              "Layout and Page Concept based on Requirements Analysis",
+              "Target Audience-Oriented Brand Communication",
+              "Online Appointment Scheduling for Time Efficiency in Work Organization",
             ],
             inquire: "#",
           },
 
           {
-            title: "Appointment booking",
-            description: "Appointment booking for companies",
+            title: "eCommerce",
+            description: "for online retail",
             bulletpoints: [
-              "Customers can easily book appointments online, regardless of business hours",
-              "Confirmation and reminder messages reduce appointment cancellations",
-              "Better overview and coordination of work processes",
-            ],
-            inquire: "#",
-          },
-
-          {
-            title: "Custom development",
-            description: "- the sky's the limit",
-            bulletpoints: [
-              "Responsive design",
-              "SEO-Optimization",
-              "User-friendly internal backends (for simple inventory management for instance)",
-              "IT security concepts (automatic backups, malewarescans, attack prevention etc.)",
-              "and so much more...",
+              "Google Cloud Infrastructure for Maximum Scalability",
+              "High-Converting Shop Interface",
+              "Payment Gateways (e.g., Paypal, Klarna & SEPA)",
+              "Digital Inventory",
             ],
             inquire: "#",
           },
