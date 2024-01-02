@@ -103,7 +103,7 @@ export default {
 {
   "en": {
     "heading": "Marketing",
-    "inquire": "Let's talk",
+    "inquire": "→ Let's talk",
     "demo": "Demo"
   },
   "de": {
