@@ -51,22 +51,37 @@ export default {
         de: [
           {
             title: "Branding",
-            description: "Strategische Identitätsbildung",
-            bulletpoints: ["..."],
+            description: "Unternehmensidentität mit Strategie.",
+            bulletpoints: [
+              "Entwicklung einer starken Markenidentität",
+              "Markenrichtlinien für visuelle Kohärenz",
+              "Strategien zur Differenzierung von Wettbewerbern",
+              "Sammlung von Logos und Designelementen",
+            ],
             inquire: "csol.dev/contact",
           },
 
           {
             title: "SEO",
-            description: "Optimierte Online-Sichtbarkeit",
-            bulletpoints: ["..."],
+            description: "Online besser gefunden werden.",
+            bulletpoints: [
+              "Website-Audit zur Identifizierung von Stärken und Schwächen",
+              "Technische Optimierung für eine bessere Website-Performance",
+              "Keyword-Recherchen für relevante Suchbegriffe",
+              "Laufendes Monitoring und Anpassung der Strategie ",
+            ],
             inquire: "#",
           },
 
           {
-            title: "Kampagnen",
-            description: "Reichweite maximieren",
-            bulletpoints: ["..."],
+            title: "Werbung",
+            description: "Mehr Reichweite, mehr Kunden.",
+            bulletpoints: [
+              "Social Media Marketing (SMM) für zielgerichtete Kampagnen",
+              "Search Engine Advertising (SEA) für sofortige Sichtbarkeit",
+              "Kampagnenmanagement für effektive Reichweite und Kundenakquise",
+              "Erfolgsmessung und Optimierung",
+            ],
             inquire: "#",
           },
         ],

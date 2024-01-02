@@ -51,7 +51,7 @@ export default {
         de: [
           {
             title: "Buisness Solo",
-            description: "für Einzelunternehmen",
+            description: "für Einzelunternehmer",
             bulletpoints: [
               "Schnelle Ladezeiten",
               "Responsive Design",
