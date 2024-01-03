@@ -77,8 +77,8 @@ export default {
             title: "Werbung",
             description: "Mehr Reichweite, mehr Kunden.",
             bulletpoints: [
-              "Social Media Marketing (SMM) für zielgerichtete Kampagnen",
-              "Search Engine Advertising (SEA) für sofortige Sichtbarkeit",
+              "Social Media Marketing für zielgerichtete Kampagnen",
+              "Search Engine Advertising für sofortige Sichtbarkeit",
               "Kampagnenmanagement für effektive Reichweite und Kundenakquise",
               "Erfolgsmessung und Optimierung",
             ],
@@ -89,22 +89,37 @@ export default {
         en: [
           {
             title: "Branding",
-            description: "Corporate identity strategy",
-            bulletpoints: ["..."],
+            description: "Identity with Strategy.",
+            bulletpoints: [
+              "Development of a strong brand identity",
+              "Brand guidelines for visual coherence",
+              "Strategies for differentiation from competitors",
+              "Graphic design of logos and design elements",
+            ],
             inquire: "csol.dev/contact",
           },
 
           {
             title: "SEO",
-            description: "Boost online visibility",
-            bulletpoints: ["..."],
+            description: "Be found online better.",
+            bulletpoints: [
+              "Website audit to identify strengths and weaknesses",
+              "Technical optimization for improved website performance",
+              "Keyword research for relevant search terms",
+              "Ongoing monitoring and adjustment of the strategy",
+            ],
             inquire: "#",
           },
 
           {
-            title: "Campaigns",
-            description: "Get high-quality leads",
-            bulletpoints: ["..."],
+            title: "Advertising",
+            description: "More reach, more customers.",
+            bulletpoints: [
+              "Social Media Marketing for targeted campaigns",
+              "Search Engine Advertising for immediate visibility",
+              "Campaign management for effective reach and customer acquisition",
+              "Success measurement and optimization",
+            ],
             inquire: "#",
           },
         ],

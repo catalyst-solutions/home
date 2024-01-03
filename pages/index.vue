@@ -126,11 +126,11 @@ const i18n = useI18n();
       "heading2": "Wir haben Erfahrung!",
       "steps": {
         "step1": {
-          "title": "01 Planung",
+          "title": "01 Beratung",
           "text": "Wir besprechen Ihre Idee kostenlos In-person oder über Online-Meetings. In dieser Phase erstellen wir mit ihnen kooperativ mood-boards und beraten Sie."
         },
         "step2": {
-          "title": "02 Evaluation & Design",
+          "title": "02 Konzept",
           "text": "Wir machen uns nochmals Gedanken über Ihren Auftrag und finalisieren das Konzept. In dieser Phase werden wir auch die ersten Design Vorschläge/Prototypen für Ihre Kampagne oder Website vorstellen."
         },
 
