@@ -56,7 +56,7 @@ export default {
               "Entwicklung einer starken Markenidentität",
               "Markenrichtlinien für visuelle Kohärenz",
               "Strategien zur Differenzierung von Wettbewerbern",
-              "Sammlung von Logos und Designelementen",
+              "Grafikdesign von Logos und Designelementen",
             ],
             inquire: "csol.dev/contact",
           },
