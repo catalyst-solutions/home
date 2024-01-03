@@ -101,7 +101,7 @@ export default {
 
           {
             title: "SEO",
-            description: "Be found online better.",
+            description: "Enhance your online visibility.",
             bulletpoints: [
               "Website audit to identify strengths and weaknesses",
               "Technical optimization for improved website performance",
