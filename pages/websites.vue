@@ -50,77 +50,80 @@ export default {
       websites: {
         de: [
           {
-            title: "Buisness Solo",
-            description: "für Einzelunternehmer",
+            title: "Corporate Site",
+            description: "für Unternehmen & Betriebe",
             bulletpoints: [
-              "Schnelle Ladezeiten",
-              "Responsive Design",
-              "Bis zu 3 Unterseiten",
-              "Interaktives Kontaktformular",
-              "DSGVO-konform",
-            ],
-            inquire: "csol.dev/contact",
-          },
-
-          {
-            title: "Corporate",
-            description: "für Betriebe & Unternehmen",
-            bulletpoints: [
-              "Layout- und Seitenkonzept nach Anforderungsanalyse",
-              "Zielgruppenorientierte Markenkommunikation",
+              "Einheitliche und zielgruppenorientierte und Markenkommunikation",
+              "Landingpage zur effektiven Bewerbung von Dienstleistungen oder Produkten",
               "Online-Terminvereinbarung für Zeitersparnis in der Arbeitsorganisation",
+              "Sonstige Seiten- und Layoutgestaltung individuell",
             ],
-            inquire: "#",
+            inquire: "https://calendly.com/csol-meeting",
           },
 
           {
-            title: "eCommerce",
+            title: "eCommerce Shop",
             description: "für den Onlinehandel",
             bulletpoints: [
-              "Google Cloud Infrastruktur für maximale Skalierbarkeit",
               "Conversionsstarke Shop-Oberfläche",
-              "Zahlungsgateways (z.B. Paypal, Klarna & SEPA)",
-              "Digitale Inventur",
+              "Maximale Betriebssicherheit und Skalierbarkeit",
+              "Integriertes Bestell- und Versandsystem",
+              "Mehrere Zahlungsmethoden",
+              "Kundenbewertungen und Feedback-Management",
             ],
-            inquire: "#",
+            inquire: "https://calendly.com/csol-meeting",
+          },
+
+          {
+            title: "Performance Hosting",
+            description: "für Wordpress-Seiten",
+            bulletpoints: [
+              "Einrichtung einer leistungsstarken Linux VM auf Google Cloud Servern",
+              "Optimierungen für schnellere Ladezeiten von Seiten und Bildern",
+
+              "Automatisierte Backuplösung",
+              "24/7 Kundensupport für Hosting-bezogene Anfragen",
+            ],
+            inquire: "https://calendly.com/csol-meeting",
           },
         ],
 
         en: [
           {
-            title: "Business Solo",
-            description: "for sole proprietors",
+            title: "Corporate Site",
+            description: "for companies & businesses",
             bulletpoints: [
-              "Fast Loading Times",
-              "Responsive Design",
-              "Up to 3 Subpages",
-              "Interactive Contact Form",
-              "DSGVO Compliant",
+              "Consistent and target group-oriented brand communication",
+              "Individual page and layout design",
+              "Landing page for effective promotion of services or products",
+              "Online appointment scheduling for time savings in work organization",
             ],
-            inquire: "csol.dev/contact",
+            inquire: "https://calendly.com/csol-meeting",
           },
 
           {
-            title: "Corporate",
-            description: "for businesses & enterprises",
+            title: "eCommerce Shop",
+            description: "for online commerce",
             bulletpoints: [
-              "Layout and Page Concept based on Requirements Analysis",
-              "Target Audience-Oriented Brand Communication",
-              "Online Appointment Scheduling for Time Efficiency in Work Organization",
+              "Conversion-strong shop interface",
+              "Maximum operational safety and scalability",
+              "Integrated ordering and shipping system",
+              "Multiple payment methods",
+              "Customer reviews and feedback management",
             ],
-            inquire: "#",
+            inquire: "https://calendly.com/csol-meeting",
           },
 
           {
-            title: "eCommerce",
-            description: "for online retail",
+            title: "Performance Hosting",
+            description: "for WordPress sites",
             bulletpoints: [
-              "Google Cloud Infrastructure for Maximum Scalability",
-              "High-Converting Shop Interface",
-              "Payment Gateways (e.g., Paypal, Klarna & SEPA)",
-              "Digital Inventory",
+              "Setup of high-performance Linux VM on Google Cloud servers",
+              "Optimized loading times for pages and images",
+              "Automated backup solution",
+              "24/7 customer support for hosting-related inquiries",
             ],
-            inquire: "#",
+            inquire: "calendly.com/csol-meeting",
           },
         ],
       },
@@ -133,7 +136,7 @@ export default {
 {
   "en": {
     "heading": "Websites",
-    "inquire": "Let's talk",
+    "inquire": "→ Inital interview",
     "demo": "Demo"
   },
   "de": {
