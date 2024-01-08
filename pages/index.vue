@@ -10,7 +10,7 @@
             </Text>
           </div>
           <div class="flex gap-4">
-            <NuxtLink to="/contact">
+            <NuxtLink to="https://calendly.com/csol-meeting">
               <Button :mode="mode" type="primary">{{
                 i18n.t("letsTalk")
               }}</Button>

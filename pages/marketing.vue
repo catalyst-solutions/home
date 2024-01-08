@@ -24,7 +24,7 @@
 
           <div class="mt-auto"></div>
           <div class="flex items-center justify-center mb-4">
-            <NuxtLink to="/contact">
+            <NuxtLink to="https://calendly.com/csol-meeting">
               <Button type="primary">
                 {{ isMobile ? i18n.t("inquireShort") : i18n.t("inquire") }}
               </Button>
@@ -58,7 +58,7 @@ export default {
               "Strategien zur Differenzierung von Wettbewerbern",
               "Grafikdesign von Logos und Designelementen",
             ],
-            inquire: "csol.dev/contact",
+            inquire: "#",
           },
 
           {
@@ -96,7 +96,7 @@ export default {
               "Strategies for differentiation from competitors",
               "Graphic design of logos and design elements",
             ],
-            inquire: "csol.dev/contact",
+            inquire: "#",
           },
 
           {

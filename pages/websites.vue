@@ -24,7 +24,7 @@
 
           <div class="mt-auto"></div>
           <div class="flex items-center justify-center mb-4">
-            <NuxtLink to="/contact">
+            <NuxtLink to="https://calendly.com/csol-meeting">
               <Button type="primary">
                 {{ isMobile ? i18n.t("inquireShort") : i18n.t("inquire") }}
               </Button>
@@ -58,7 +58,7 @@ export default {
               "Online-Terminvereinbarung für Zeitersparnis in der Arbeitsorganisation",
               "Sonstige Seiten- und Layoutgestaltung individuell",
             ],
-            inquire: "https://calendly.com/csol-meeting",
+            inquire: "#",
           },
 
           {
@@ -71,7 +71,7 @@ export default {
               "Mehrere Zahlungsmethoden",
               "Kundenbewertungen und Feedback-Management",
             ],
-            inquire: "https://calendly.com/csol-meeting",
+            inquire: "#",
           },
 
           {
@@ -84,7 +84,7 @@ export default {
               "Automatisierte Backuplösung",
               "24/7 Kundensupport für Hosting-bezogene Anfragen",
             ],
-            inquire: "https://calendly.com/csol-meeting",
+            inquire: "#",
           },
         ],
 
@@ -98,7 +98,7 @@ export default {
               "Landing page for effective promotion of services or products",
               "Online appointment scheduling for time savings in work organization",
             ],
-            inquire: "https://calendly.com/csol-meeting",
+            inquire: "#",
           },
 
           {
@@ -111,7 +111,7 @@ export default {
               "Multiple payment methods",
               "Customer reviews and feedback management",
             ],
-            inquire: "https://calendly.com/csol-meeting",
+            inquire: "#",
           },
 
           {
@@ -123,7 +123,7 @@ export default {
               "Automated backup solution",
               "24/7 customer support for hosting-related inquiries",
             ],
-            inquire: "calendly.com/csol-meeting",
+            inquire: "#",
           },
         ],
       },
