@@ -24,7 +24,7 @@
 
           <div class="mt-auto"></div>
           <div class="flex items-center justify-center mb-4">
-            <NuxtLink to="https://calendly.com/csol-meeting">
+            <NuxtLink to="https://calendly.com/csol-meeting/30min">
               <Button type="primary">
                 {{ isMobile ? i18n.t("inquireShort") : i18n.t("inquire") }}
               </Button>
